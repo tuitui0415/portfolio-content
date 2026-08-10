@@ -98,5 +98,12 @@ class RepositoryCompletenessTests(unittest.TestCase):
         self.assertTrue(expected.issubset(load_project_ids(ROOT)))
 
 
+class ProjectDocumentationTests(unittest.TestCase):
+    def test_every_project_has_a_human_readable_page(self):
+        for project_id in load_project_ids(ROOT):
+            page = ROOT / "projects" / project_id / "README.md"
+            self.assertTrue(page.is_file(), str(page))
+
+
 if __name__ == "__main__":
     unittest.main()
