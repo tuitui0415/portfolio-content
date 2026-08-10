@@ -86,6 +86,8 @@ def check_link(record, timeout=15.0):
 
 
 def recommended_action(record):
+    if record.get("action") == "archive-unavailable":
+        return "archive-unavailable"
     if record["access"] == "public":
         return "keep"
     if record["access"] == "restricted":
@@ -131,12 +133,15 @@ def run(write=False):
     records = json.loads(LINKS_PATH.read_text(encoding="utf-8"))
     today = date.today().isoformat()
     for record in records:
+        owner_archived = record.get("action") == "archive-unavailable"
         result = check_link(record)
         if result["access"] == "unclear" and record["access"] == "public":
             record["evidence"] = result["evidence"] + "; retained prior evidence-backed public status"
         else:
             record["access"] = result["access"]
             record["evidence"] = result["evidence"]
+        if owner_archived:
+            record["evidence"] += "; owner confirmed source unavailable"
         record["checked_at"] = today
         record["action"] = recommended_action(record)
         print(f"{record['id']}: {record['access']} - {record['evidence']}")

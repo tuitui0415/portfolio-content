@@ -1,0 +1,28 @@
+{
+  "id": "ue5-adaptive-music-system",
+  "title": {"zh": "UE5 自适应分层音乐系统（暂定）", "en": "UE5 Adaptive Layered Music System (Working Title)"},
+  "type": "solo-project",
+  "status": "video-demonstrated-prototype",
+  "dates": {"start": "", "end": ""},
+  "team": {"size": 1, "context": {"zh": "个人独立项目", "en": "Independently completed solo project"}},
+  "roles": {"zh": ["音乐系统设计", "UE5 程序开发", "交互设计"], "en": ["Music Systems Design", "UE5 Programming", "Interaction Design"]},
+  "tools": ["Unreal Engine 5"],
+  "summary": {"zh": "在 UE5 中将同一段音乐按乐器拆分为多个声部层，并通过玩家与不同环境的互动逐步叠加声部，最终组合成完整音乐。", "en": "An Unreal Engine 5 system that separates one composition into instrument layers and adds them through environmental interactions until the complete arrangement emerges."},
+  "design": {
+    "goals": {"zh": ["让环境互动直接改变音乐编排", "用逐层丰富的音乐反馈表现玩家的探索进展"], "en": ["Make environmental interactions directly alter the musical arrangement", "Represent exploration progress through increasingly rich musical feedback"]},
+    "mechanics": {"zh": ["同一段音乐按乐器分层", "环境互动触发不同乐器层", "多个声部逐步叠加为完整音乐"], "en": ["One composition separated into instrument layers", "Environmental interactions trigger different instrument layers", "Multiple stems accumulate into the complete arrangement"]},
+    "decisions": {"zh": [], "en": []},
+    "iteration": {"zh": [], "en": []}
+  },
+  "copy": {
+    "resume": {
+      "zh": ["在 UE5 中独立实现分层音乐交互系统，将同一段音乐拆分为多个乐器声部，并由环境互动控制声部叠加。", "设计由单一声部逐步组合为完整音乐的反馈过程，使玩家的环境探索能够被即时听觉变化感知。"],
+      "en": ["Independently implemented a layered music interaction system in UE5, separating one composition into instrument stems controlled by environmental interactions.", "Designed an audible progression from individual stems to a complete arrangement so environmental exploration produces immediate musical feedback."]
+    },
+    "website": {"zh": "这是一个独立完成的 UE5 音乐编程原型。玩家与不同环境互动时会加入对应的乐器层，使音乐从单一声部逐渐发展为完整编排。", "en": "An independently developed UE5 music-programming prototype in which environmental interactions add instrument layers, gradually transforming a sparse track into a complete arrangement."},
+    "full": {"zh": "项目探索音乐与环境交互之间的直接映射：同一段音乐被拆分为多个乐器声部，玩家触发不同环境元素时，相应声部加入并与已有声部同步叠加，最终组合成完整音乐。", "en": "The project explores a direct mapping between music and environmental interaction. One composition is separated into instrument stems; as the player triggers different environmental elements, corresponding stems join the synchronized mix until the full arrangement is formed."}
+  },
+  "link_ids": ["final-video-drive"],
+  "sources": ["Owner statement", "Public Final Video demonstration"],
+  "questions": ["项目的正式中英文名称是什么？", "项目的准确开发时间是什么？", "使用了哪些 UE5 音频系统、蓝图或代码技术？", "不同环境元素分别如何触发或控制乐器层？", "音乐和音频素材是否由你制作，或来自可公开使用的第三方素材？"]
+}

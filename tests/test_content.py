@@ -94,7 +94,7 @@ class RepositoryCompletenessTests(unittest.TestCase):
         self.assertTrue(expected.issubset(load_project_ids(ROOT)))
 
     def test_new_agent_projects_are_imported(self):
-        expected = {"rhythm-watershed", "modular-mining-game"}
+        expected = {"rhythm-watershed", "modular-mining-game", "ue5-adaptive-music-system"}
         self.assertTrue(expected.issubset(load_project_ids(ROOT)))
 
 

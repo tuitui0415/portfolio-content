@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from scripts.check_links import classify_response
+from scripts.check_links import classify_response, recommended_action
 
 
 class LinkClassificationTests(unittest.TestCase):
@@ -27,6 +27,10 @@ class LinkClassificationTests(unittest.TestCase):
     def test_transport_failure_is_unclear(self):
         access, _ = classify_response(0, {}, b"timed out", "https://example.test/slow")
         self.assertEqual(access, "unclear")
+
+    def test_owner_archived_link_stays_archived(self):
+        record = {"access": "restricted", "action": "archive-unavailable"}
+        self.assertEqual(recommended_action(record), "archive-unavailable")
 
 
 if __name__ == "__main__":

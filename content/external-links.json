@@ -72,11 +72,11 @@
   {
     "id": "final-video-drive",
     "label": {
-      "zh": "Final Video",
-      "en": "Final Video"
+      "zh": "UE5 自适应分层音乐系统演示视频",
+      "en": "UE5 Adaptive Layered Music System Demo"
     },
     "url": "https://drive.google.com/file/d/1j6MyazBWYD8wOGdFHYAluxUSxuqQNeD_/view?usp=drive_link",
-    "project_id": "",
+    "project_id": "ue5-adaptive-music-system",
     "type": "video",
     "access": "public",
     "checked_at": "2026-08-10",
@@ -122,7 +122,7 @@
     "type": "press",
     "access": "public",
     "checked_at": "2026-08-10",
-    "evidence": "HTTP 200; title: Computational media researcher’s new virtual reality games empower underrepresented communities, support social wellbein",
+    "evidence": "<urlopen error [Errno 8] nodename nor servname provided, or not known>; retained prior evidence-backed public status",
     "action": "keep"
   },
   {
@@ -164,8 +164,8 @@
     "type": "project-file",
     "access": "restricted",
     "checked_at": "2026-08-10",
-    "evidence": "HTTP 401",
-    "action": "fix-sharing"
+    "evidence": "HTTP 401; owner confirmed source unavailable",
+    "action": "archive-unavailable"
   },
   {
     "id": "psychotherapy-playable-page",
