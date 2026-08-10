@@ -62,7 +62,7 @@
       "en": "The project develops from world setting, level map, and flow diagram into enemy and environment placement, visual mood, stealth, subtle guidance, a water-level mechanism, and a boss encounter. The UE5 prototype implements elevators, water-level changes, and one-way doors in Blueprint, with PawnSensing for enemy detection. Greyboxing uses BlockoutTools; character, enemy AI, and animation dependencies come from UE starter content and are not redistributed in the public source package."
     }
   },
-  "link_ids": [],
+  "link_ids": ["mont-saint-michel-gameplay", "mont-saint-michel-ue-source"],
   "sources": ["Owner-provided 11-slide design deck", "Owner-provided gameplay capture", "Owner-provided Unreal Engine project", "Owner-provided technical overview"],
   "questions": ["2025 年 8 月是否为准确完成时间？", "是否需要补充各区域的迭代前后对比图？"]
 }

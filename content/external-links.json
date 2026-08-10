@@ -122,7 +122,7 @@
     "type": "press",
     "access": "public",
     "checked_at": "2026-08-10",
-    "evidence": "<urlopen error [Errno 8] nodename nor servname provided, or not known>; retained prior evidence-backed public status",
+    "evidence": "HTTP 200; title: Computational media researcher’s new virtual reality games empower underrepresented communities, support social wellbein",
     "action": "keep"
   },
   {
@@ -225,35 +225,44 @@
   },
   {
     "id": "xr-drone-demo-1",
-    "label": {"zh": "多人 XR 无人机演示 1", "en": "Multiplayer XR Drone Demo 1"},
+    "label": {
+      "zh": "多人 XR 无人机演示 1",
+      "en": "Multiplayer XR Drone Demo 1"
+    },
     "url": "https://drive.google.com/file/d/1xxeWGSNKx0s91qBrPC__3XJ4tc_GEtFq/view?usp=drive_link",
     "project_id": "multiplayer-xr-drone-game",
     "type": "video",
     "access": "public",
     "checked_at": "2026-08-10",
-    "evidence": "Anonymous access verified; Google Drive video",
+    "evidence": "HTTP 200; title: demo1.mp4 - Google Drive",
     "action": "keep"
   },
   {
     "id": "xr-drone-demo-2",
-    "label": {"zh": "多人 XR 无人机演示 2", "en": "Multiplayer XR Drone Demo 2"},
+    "label": {
+      "zh": "多人 XR 无人机演示 2",
+      "en": "Multiplayer XR Drone Demo 2"
+    },
     "url": "https://drive.google.com/file/d/1jNFdSLS08G4SvIFyNn2V92enObmsLwWD/view?usp=sharing",
     "project_id": "multiplayer-xr-drone-game",
     "type": "video",
     "access": "public",
     "checked_at": "2026-08-10",
-    "evidence": "Anonymous access verified; Google Drive video",
+    "evidence": "HTTP 200; title: demo2.mp4 - Google Drive",
     "action": "keep"
   },
   {
     "id": "xr-drone-demo-3",
-    "label": {"zh": "多人 XR 无人机演示 3", "en": "Multiplayer XR Drone Demo 3"},
+    "label": {
+      "zh": "多人 XR 无人机演示 3",
+      "en": "Multiplayer XR Drone Demo 3"
+    },
     "url": "https://drive.google.com/file/d/18aeK2iHkyKFJPNtePuEJAAJN1gW3l3Zw/view?usp=sharing",
     "project_id": "multiplayer-xr-drone-game",
     "type": "video",
     "access": "public",
     "checked_at": "2026-08-10",
-    "evidence": "Anonymous access verified; Google Drive video",
+    "evidence": "HTTP 200; title: demo3.mp4 - Google Drive",
     "action": "keep"
   },
   {
@@ -267,7 +276,35 @@
     "type": "source-code",
     "access": "public",
     "checked_at": "2026-08-10",
-    "evidence": "Public GitHub repository and branch verified",
+    "evidence": "HTTP 206; title: GitHub - RaymondHKang/ECS289HFinalProject at raymondbranch · GitHub",
+    "action": "keep"
+  },
+  {
+    "id": "mont-saint-michel-gameplay",
+    "label": {
+      "zh": "圣米歇尔山城堡玩法视频",
+      "en": "Mont Saint-Michel Castle Gameplay Video"
+    },
+    "url": "https://drive.google.com/file/d/1H597Gzs9OSItAag5ImkcHavJp5vWotrf/view?usp=sharing",
+    "project_id": "mont-saint-michel-castle",
+    "type": "video",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "HTTP 200; title: mont-saint-michel-castle-gameplay-web.m4v - Google Drive",
+    "action": "keep"
+  },
+  {
+    "id": "mont-saint-michel-ue-source",
+    "label": {
+      "zh": "圣米歇尔山城堡精简 UE 工程包",
+      "en": "Mont Saint-Michel Castle Clean UE Source Package"
+    },
+    "url": "https://drive.google.com/file/d/1dQWlbNv7zYbEpU1R3VkHe-fd6TZtpZ5d/view?usp=sharing",
+    "project_id": "mont-saint-michel-castle",
+    "type": "source-archive",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "HTTP 200; title: mont-saint-michel-castle-ue-project.zip - Google Drive",
     "action": "keep"
   }
 ]

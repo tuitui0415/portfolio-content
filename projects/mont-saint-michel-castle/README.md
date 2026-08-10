@@ -29,8 +29,10 @@ This independently designed and implemented third-person soulslike level uses ca
 - [Level preview](assets/level-preview.png)
 - [Technical overview](technical-overview.md)
 - [Public source-package notes](package-readme.md)
+- [Web-optimized gameplay video](https://drive.google.com/file/d/1H597Gzs9OSItAag5ImkcHavJp5vWotrf/view?usp=sharing)
+- [Clean Unreal Engine source package](https://drive.google.com/file/d/1dQWlbNv7zYbEpU1R3VkHe-fd6TZtpZ5d/view?usp=sharing)
 
-大型玩法视频与精简工程包将在完成公开访问检查后登记于此。
+玩法视频为从原始录屏生成的网页优化版；精简工程包仅包含本人制作且适合公开分发的项目文件，依赖说明见上方文档。
 
 ## 时间说明 / Date Note
 
