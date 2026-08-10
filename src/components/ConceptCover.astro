@@ -1,0 +1,19 @@
+---
+import type { Locale } from '../lib/content/types';
+import { ui } from '../lib/i18n/copy';
+
+interface Props { projectId: string; title: string; locale: Locale; accent: string }
+const { projectId, title, locale, accent } = Astro.props;
+let seed = 0;
+for (const character of projectId) seed = (seed * 31 + character.charCodeAt(0)) % 997;
+---
+
+<figure class="concept-cover" style={`--accent:${accent};--seed:${seed}`}>
+  <div class="concept-scene" aria-hidden="true">
+    <span class="concept-orbit"></span>
+    <span class="concept-book b1"></span><span class="concept-book b2"></span><span class="concept-book b3"></span>
+    <span class="concept-glyph">{String(seed).padStart(3, '0')}</span>
+    <span class="concept-grid"></span>
+  </div>
+  <figcaption><span>{ui[locale].concept}</span><b>{title}</b><small>{projectId.toUpperCase().replaceAll('-', ' / ')}</small></figcaption>
+</figure>

@@ -1,0 +1,74 @@
+---
+import type { Locale, ProjectMedia, ProjectViewModel } from '../lib/content/types';
+import { projectTypeLabels, ui } from '../lib/i18n/copy';
+import ConceptCover from './ConceptCover.astro';
+
+interface Props {
+  project: ProjectViewModel; locale: Locale; previous?: ProjectViewModel; next?: ProjectViewModel; media: ProjectMedia;
+}
+const { project, locale, previous, next, media } = Astro.props;
+const isZh = locale === 'zh';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const route = (id: string) => `${base}/${locale}/projects/${id}/`;
+const formatDate = (value: string) => {
+  if (!value) return '';
+  const [year, month] = value.split('-');
+  return isZh ? `${year}.${month}` : new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', timeZone: 'UTC' }).format(new Date(`${value}-01T00:00:00Z`));
+};
+const date = project.dates.end ? `${formatDate(project.dates.start)} — ${formatDate(project.dates.end)}` : formatDate(project.dates.start);
+const type = projectTypeLabels[locale][project.type] ?? project.type.replaceAll('-', ' ');
+const sections = [
+  { key: 'goals', number: '01', title: isZh ? '设计目标' : 'Design Goals', items: project.design.goals },
+  { key: 'mechanics', number: '02', title: isZh ? '核心机制' : 'Core Mechanics', items: project.design.mechanics },
+  { key: 'decisions', number: '03', title: isZh ? '关键决策' : 'Key Decisions', items: project.design.decisions },
+  { key: 'iteration', number: '04', title: isZh ? '迭代与验证' : 'Iteration & Validation', items: project.design.iteration },
+];
+---
+
+<article class="project-dossier">
+  <nav class="project-crumb" aria-label={isZh ? '项目导航' : 'Project navigation'}>
+    <a href={`${base}/${locale}/journey/`}>← {ui[locale].backLibrary}</a><span>{date}</span>
+  </nav>
+
+  <header class="project-hero" style={`--project-accent:${media.accent}`}>
+    <div class="project-heading">
+      <p class="eyebrow">{type} · {project.status.replaceAll('-', ' ')}</p>
+      <h1 class="display-title">{project.title}</h1>
+      {project.titleAlt !== project.title && <p class="project-alt-title">{project.titleAlt}</p>}
+      <p class="project-summary">{project.websiteCopy || project.summary}</p>
+      <dl class="project-meta">
+        <div><dt>{isZh ? '时间' : 'Date'}</dt><dd>{date}</dd></div>
+        <div><dt>{isZh ? '职责' : 'Role'}</dt><dd>{project.roles.join(' · ')}</dd></div>
+        <div><dt>{isZh ? '团队' : 'Team'}</dt><dd>{project.teamContext}</dd></div>
+      </dl>
+      {project.links.length > 0 && <div class="project-links">
+        {project.links.map((link) => <a class="button" href={link.url} target="_blank" rel="noreferrer">{link.label}<span aria-hidden="true"> ↗</span></a>)}
+      </div>}
+    </div>
+    <div class="project-visual">
+      {media.kind === 'image' && media.src
+        ? <figure class="real-media"><img src={media.src} alt={media.alt?.[locale] ?? ''} width="900" height="1165" loading="eager" /><figcaption>{isZh ? '项目原始材料预览' : 'Original project material'}</figcaption></figure>
+        : <ConceptCover projectId={project.id} title={project.title} locale={locale} accent={media.accent} />}
+    </div>
+  </header>
+
+  <section class="project-overview">
+    <p class="eyebrow">{isZh ? '档案摘要' : 'ARCHIVE ABSTRACT'}</p>
+    <p>{project.fullCopy || project.summary}</p>
+    <div class="tool-strip" aria-label={isZh ? '工具' : 'Tools'}>{project.tools.map((tool) => <span>{tool}</span>)}</div>
+  </section>
+
+  <div class="project-sections">
+    {sections.filter(({ items }) => items.length > 0).map((section) => (
+      <section id={section.key}>
+        <span>{section.number}</span><h2>{section.title}</h2>
+        <ul>{section.items.map((item) => <li>{item}</li>)}</ul>
+      </section>
+    ))}
+  </div>
+
+  <nav class="project-pagination" aria-label={isZh ? '前后项目' : 'Adjacent projects'}>
+    {previous ? <a href={route(previous.id)}><small>← {isZh ? '上一个档案' : 'Previous file'}</small><b>{previous.title}</b></a> : <span></span>}
+    {next ? <a href={route(next.id)}><small>{isZh ? '下一个档案' : 'Next file'} →</small><b>{next.title}</b></a> : <span></span>}
+  </nav>
+</article>

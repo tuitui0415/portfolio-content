@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ProjectDossier from '../../../components/ProjectDossier.astro';
+import { loadPortfolio, localizePortfolio } from '../../../lib/content/load';
+import { getProjectMedia } from '../../../lib/content/media';
+import type { Locale, ProjectViewModel } from '../../../lib/content/types';
+import '../../../styles/project.css';
+
+interface Props { locale: Locale; project: ProjectViewModel; previous?: ProjectViewModel; next?: ProjectViewModel }
+
+export function getStaticPaths() {
+  const data = loadPortfolio();
+  return (['zh', 'en'] as Locale[]).flatMap((locale) => {
+    const projects = localizePortfolio(data, locale).projects;
+    return projects.map((project, index) => ({
+      params: { lang: locale, id: project.id },
+      props: { locale, project, previous: projects[index - 1], next: projects[index + 1] },
+    }));
+  });
+}
+
+const { locale, project, previous, next } = Astro.props as Props;
+const media = getProjectMedia(project.id);
+---
+
+<BaseLayout locale={locale} title={`${project.title} · Yunhan Wei`} description={project.summary} bodyClass="project-page">
+  <ProjectDossier project={project} locale={locale} previous={previous} next={next} media={media} />
+</BaseLayout>
