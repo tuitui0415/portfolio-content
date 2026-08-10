@@ -1,0 +1,67 @@
+{
+  "id": "multiplayer-xr-drone-game",
+  "title": {
+    "zh": "多人 XR 无人机游戏",
+    "en": "Multiplayer XR Drone Game"
+  },
+  "type": "academic-team-project",
+  "status": "completed-prototype",
+  "dates": {
+    "start": "2026-03",
+    "end": "2026-06",
+    "context": {
+      "zh": "UC Davis 2026 年春季学季",
+      "en": "UC Davis, Spring 2026"
+    }
+  },
+  "team": {
+    "context": {
+      "zh": "课程团队项目；报告由魏允瀚署名",
+      "en": "Course team project; report authored by Yunhan Wei"
+    }
+  },
+  "roles": {
+    "zh": ["XR 系统开发", "多人网络同步", "空间校准", "游戏原型开发"],
+    "en": ["XR Systems Development", "Multiplayer Networking", "Spatial Calibration", "Game Prototyping"]
+  },
+  "tools": ["Unity", "C#", "ZED Camera", "ZED SDK", "Photon PUN", "CUDA"],
+  "summary": {
+    "zh": "在 Unity 中开发多人 XR 无人机游戏原型，将 ZED 相机追踪空间映射至共享虚拟坐标，并通过 Photon PUN 同步校准结果与多人游戏状态。",
+    "en": "A multiplayer XR drone-game prototype in Unity that maps ZED camera tracking into shared virtual coordinates and synchronizes calibration and gameplay state through Photon PUN."
+  },
+  "design": {
+    "goals": {
+      "zh": ["让多名玩家在同一物理空间中共享一致的虚拟坐标", "将空间校准融入可操作的无人机游戏循环"],
+      "en": ["Give multiple players a consistent shared virtual coordinate frame", "Integrate spatial calibration into a playable drone-game loop"]
+    },
+    "mechanics": {
+      "zh": ["尺度与偏航校准", "真实地面锚定", "多锚点相似变换拟合", "主机权威校准快照同步"],
+      "en": ["Scale and yaw calibration", "Real-floor anchoring", "Multi-anchor similarity fitting", "Host-authoritative calibration snapshots"]
+    },
+    "decisions": {
+      "zh": ["使用稳健多锚点拟合降低异常标定点的影响", "由主机发布统一校准快照，减少客户端坐标分歧"],
+      "en": ["Use robust multi-anchor fitting to reduce the impact of outlier calibration points", "Have the host publish a shared calibration snapshot to reduce client coordinate divergence"]
+    },
+    "iteration": {
+      "zh": ["加入在线校准修正以改善运行过程中的空间一致性", "实体无人机尚未稳定运行，当前原型以 ZED 相机完成核心体验验证"],
+      "en": ["Added online calibration refinement to improve spatial consistency during play", "Physical drones were not yet reliable, so the current prototype validates the core experience with the ZED camera"]
+    }
+  },
+  "copy": {
+    "resume": {
+      "zh": ["使用 Unity、C#、ZED SDK 与 Photon PUN 开发多人 XR 无人机游戏原型，实现真实空间到共享虚拟坐标的尺度、偏航与地面校准。", "设计稳健多锚点拟合、在线修正与主机权威校准快照同步，降低异常锚点及多客户端坐标偏差对体验的影响。"],
+      "en": ["Developed a multiplayer XR drone-game prototype with Unity, C#, ZED SDK, and Photon PUN, including scale, yaw, and floor calibration from physical space to a shared virtual frame.", "Designed robust multi-anchor fitting, online refinement, and host-authoritative calibration snapshots to reduce outlier and cross-client coordinate errors."]
+    },
+    "website": {
+      "zh": "该原型探索如何让多名玩家在同一真实空间内共享一致的 XR 无人机体验。系统通过 ZED 相机获取空间追踪数据，完成尺度、偏航与地面校准，并由 Photon PUN 同步统一校准结果和多人状态。",
+      "en": "This prototype explores how multiple players can share a consistent XR drone experience in one physical space. ZED tracking drives scale, yaw, and floor calibration, while Photon PUN distributes a shared calibration result and multiplayer state."
+    },
+    "full": {
+      "zh": "项目在 Unity 中建立从 ZED 相机追踪空间到共享虚拟世界的校准流程。除基础尺度、偏航和真实地面锚定外，系统使用稳健多锚点相似变换拟合与在线修正提高空间一致性，并通过主机权威快照向各客户端同步校准状态。当前成果为可玩的相机驱动原型；实体无人机集成仍是后续工作。",
+      "en": "The project builds a calibration pipeline from ZED camera tracking space into a shared Unity world. Beyond scale, yaw, and real-floor anchoring, it uses robust multi-anchor similarity fitting and online refinement for consistency, then distributes calibration state through host-authoritative snapshots. The current result is a playable camera-driven prototype; physical-drone integration remains future work."
+    }
+  },
+  "link_ids": ["xr-drone-demo-1", "xr-drone-demo-2", "xr-drone-demo-3"],
+  "sources": ["Owner-provided final report", "Three public Google Drive demonstrations"],
+  "questions": ["团队人数和其他成员分工是什么？", "是否有可公开的源代码仓库？"]
+}

@@ -222,5 +222,38 @@
     "checked_at": "2026-08-10",
     "evidence": "Non-HTTP public contact link.",
     "action": "keep"
+  },
+  {
+    "id": "xr-drone-demo-1",
+    "label": {"zh": "多人 XR 无人机演示 1", "en": "Multiplayer XR Drone Demo 1"},
+    "url": "https://drive.google.com/file/d/1xxeWGSNKx0s91qBrPC__3XJ4tc_GEtFq/view?usp=drive_link",
+    "project_id": "multiplayer-xr-drone-game",
+    "type": "video",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous access verified; Google Drive video",
+    "action": "keep"
+  },
+  {
+    "id": "xr-drone-demo-2",
+    "label": {"zh": "多人 XR 无人机演示 2", "en": "Multiplayer XR Drone Demo 2"},
+    "url": "https://drive.google.com/file/d/1jNFdSLS08G4SvIFyNn2V92enObmsLwWD/view?usp=sharing",
+    "project_id": "multiplayer-xr-drone-game",
+    "type": "video",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous access verified; Google Drive video",
+    "action": "keep"
+  },
+  {
+    "id": "xr-drone-demo-3",
+    "label": {"zh": "多人 XR 无人机演示 3", "en": "Multiplayer XR Drone Demo 3"},
+    "url": "https://drive.google.com/file/d/18aeK2iHkyKFJPNtePuEJAAJN1gW3l3Zw/view?usp=sharing",
+    "project_id": "multiplayer-xr-drone-game",
+    "type": "video",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous access verified; Google Drive video",
+    "action": "keep"
   }
 ]
