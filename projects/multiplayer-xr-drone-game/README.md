@@ -2,11 +2,11 @@
 
 ## 中文概述
 
-这是一个在 UC Davis 2026 年春季学季完成的多人 XR 无人机游戏原型。系统使用 ZED 相机获取空间追踪数据，在 Unity 中完成尺度、偏航和真实地面校准，并通过 Photon PUN 将统一校准结果与游戏状态同步给多名玩家。
+这是魏允瀚在 UC Davis 2026 年春季学季独立完成的多人 XR 无人机游戏研究原型。系统使用 ZED 相机获取空间追踪数据，在 Unity 中完成尺度、偏航和真实地面校准，并通过 Photon PUN 将统一校准结果与游戏状态同步给多名玩家。
 
 ## English Overview
 
-This multiplayer XR drone-game prototype was completed at UC Davis in Spring 2026. It uses ZED camera tracking to calibrate scale, yaw, and the real floor in Unity, then synchronizes a shared calibration result and gameplay state through Photon PUN.
+This multiplayer XR drone-game research prototype was independently completed by Yunhan Wei at UC Davis in Spring 2026. It uses ZED camera tracking to calibrate scale, yaw, and the real floor in Unity, then synchronizes a shared calibration result and gameplay state through Photon PUN.
 
 ## 技术与设计重点 / Technical and Design Focus
 
@@ -28,5 +28,4 @@ This multiplayer XR drone-game prototype was completed at UC Davis in Spring 202
 
 ## 待补充 / Open Questions
 
-- 团队人数与成员分工
 - 可公开的源代码仓库

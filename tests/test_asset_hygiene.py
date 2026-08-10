@@ -14,6 +14,8 @@ class AssetHygieneTests(unittest.TestCase):
             ROOT / "projects/interpretable-nsfw-text-moderation/assets/interpretable-nsfw-text-moderation-report.pdf",
             ROOT / "projects/mont-saint-michel-castle/assets/mont-saint-michel-castle-level-design.pptx",
             ROOT / "projects/mont-saint-michel-castle/assets/level-preview.png",
+            ROOT / "projects/mont-saint-michel-castle/technical-overview.md",
+            ROOT / "projects/mont-saint-michel-castle/package-readme.md",
         ]
         for path in expected:
             self.assertTrue(path.is_file(), str(path))
@@ -36,7 +38,7 @@ class AssetHygieneTests(unittest.TestCase):
 
     def test_level_design_assets_have_no_source_campaign_markers(self):
         project_root = ROOT / "projects/mont-saint-michel-castle"
-        banned = ("雷火", "秋招", "招聘", "题目")
+        banned = ("雷火", "秋招", "招聘", "应聘", "笔试", "面试", "岗位", "题目", "网易")
         hits = []
         if not project_root.exists():
             self.fail(str(project_root))

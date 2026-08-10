@@ -1,0 +1,68 @@
+{
+  "id": "mont-saint-michel-castle",
+  "title": {
+    "zh": "圣米歇尔山城堡",
+    "en": "Mont Saint-Michel Castle"
+  },
+  "type": "solo-level-design-project",
+  "status": "completed-prototype",
+  "dates": {
+    "start": "2025-08",
+    "end": "2025-08",
+    "context": {
+      "zh": "月份依据源文件时间推定，待本人确认",
+      "en": "Month inferred from source-file timestamps; owner confirmation pending"
+    }
+  },
+  "team": {
+    "size": 1,
+    "context": {
+      "zh": "个人独立关卡设计与实现",
+      "en": "Independently designed and implemented solo level-design project"
+    }
+  },
+  "roles": {
+    "zh": ["关卡设计", "灰盒搭建", "战斗与潜行节奏设计", "Blueprint 玩法实现"],
+    "en": ["Level Design", "Greyboxing", "Combat and Stealth Pacing", "Blueprint Gameplay Implementation"]
+  },
+  "tools": ["Unreal Engine 5.6.1", "Blueprint", "BlockoutTools", "PawnSensing"],
+  "summary": {
+    "zh": "以圣米歇尔山城堡为主题的第三人称类魂线性关卡，从世界设定、路线流向和弱引导出发，组织潜行、环境机关、战斗与 Boss 遭遇。",
+    "en": "A third-person linear soulslike level set around Mont Saint-Michel Castle, organizing stealth, environmental mechanisms, combat, and a boss encounter through worldbuilding, route flow, and subtle guidance."
+  },
+  "design": {
+    "goals": {
+      "zh": ["在高差显著的城堡空间中建立清晰的线性推进", "交替安排观察、潜行、机关与战斗，形成节奏变化", "使用构图、灯光和地标完成弱引导"],
+      "en": ["Create clear linear progression through a castle with pronounced verticality", "Alternate observation, stealth, mechanisms, and combat for pacing variety", "Guide players subtly through composition, lighting, and landmarks"]
+    },
+    "mechanics": {
+      "zh": ["单向门与回环捷径", "升降机与动态水位", "PawnSensing 敌人侦测", "潜行穿越与正面战斗", "Boss 战斗空间"],
+      "en": ["One-way doors and looping shortcuts", "Elevator and dynamic water level", "PawnSensing enemy detection", "Stealth traversal and direct combat", "Boss arena"]
+    },
+    "decisions": {
+      "zh": ["用垂直地标和明暗对比提示主要目标", "以水位变化和升降装置改变可通行路径", "在狭窄通道与开阔战斗区之间切换空间压力"],
+      "en": ["Use vertical landmarks and value contrast to signal the main objective", "Change traversable routes through water-level shifts and elevator movement", "Vary spatial pressure between narrow passages and open combat spaces"]
+    },
+    "iteration": {
+      "zh": ["通过完整流程图检查遭遇、机关与休整段落的分布", "以灰盒快速验证路线、高差、视线和战斗空间"],
+      "en": ["Used a full flow diagram to check the distribution of encounters, mechanisms, and recovery beats", "Validated routes, elevation, sightlines, and combat spaces through rapid greyboxing"]
+    }
+  },
+  "copy": {
+    "resume": {
+      "zh": ["独立设计并在 UE5.6.1 中搭建第三人称类魂线性关卡，围绕城堡高差组织潜行、机关、战斗与 Boss 遭遇，并以构图、灯光和地标完成弱引导。", "使用 Blueprint 实现升降机、动态水位、单向门与 PawnSensing 敌人侦测，通过流程图和灰盒迭代路线、视线与战斗节奏。"],
+      "en": ["Independently designed and greyboxed a third-person linear soulslike level in UE5.6.1, using castle verticality to pace stealth, mechanisms, combat, and a boss encounter with subtle visual guidance.", "Implemented elevators, dynamic water levels, one-way doors, and PawnSensing detection in Blueprint, iterating route flow, sightlines, and combat pacing through diagrams and greybox tests."]
+    },
+    "website": {
+      "zh": "《圣米歇尔山城堡》是一个独立完成的第三人称类魂关卡设计项目。关卡利用城堡的垂直高差和水位变化控制路线，将潜行、环境机关、战斗和 Boss 遭遇组织为清晰的线性体验，并通过构图与地标进行弱引导。",
+      "en": "Mont Saint-Michel Castle is an independently completed third-person soulslike level-design project. Castle verticality and changing water levels control the route, while stealth, environmental mechanisms, combat, and a boss encounter form a clear linear experience guided through composition and landmarks."
+    },
+    "full": {
+      "zh": "项目从世界设定、关卡地图和流程图开始，逐步落实敌人与环境布置、视觉氛围、潜行段落、弱引导、水位机关和 Boss 战斗。UE5 原型使用 Blueprint 实现升降机、水位变化和单向门，并通过 PawnSensing 进行敌人视野检测。灰盒由 BlockoutTools 辅助搭建；角色、敌人 AI 与动作依赖 UE 基础内容，公开工程包不重新分发这些依赖。",
+      "en": "The project develops from world setting, level map, and flow diagram into enemy and environment placement, visual mood, stealth, subtle guidance, a water-level mechanism, and a boss encounter. The UE5 prototype implements elevators, water-level changes, and one-way doors in Blueprint, with PawnSensing for enemy detection. Greyboxing uses BlockoutTools; character, enemy AI, and animation dependencies come from UE starter content and are not redistributed in the public source package."
+    }
+  },
+  "link_ids": [],
+  "sources": ["Owner-provided 11-slide design deck", "Owner-provided gameplay capture", "Owner-provided Unreal Engine project", "Owner-provided technical overview"],
+  "questions": ["2025 年 8 月是否为准确完成时间？", "是否需要补充各区域的迭代前后对比图？"]
+}

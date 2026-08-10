@@ -4,7 +4,7 @@
     "zh": "多人 XR 无人机游戏",
     "en": "Multiplayer XR Drone Game"
   },
-  "type": "academic-team-project",
+  "type": "solo-research-project",
   "status": "completed-prototype",
   "dates": {
     "start": "2026-03",
@@ -15,9 +15,10 @@
     }
   },
   "team": {
+    "size": 1,
     "context": {
-      "zh": "课程团队项目；报告由魏允瀚署名",
-      "en": "Course team project; report authored by Yunhan Wei"
+      "zh": "魏允瀚独立完成的研究工程项目，接受导师与实验室支持",
+      "en": "Individual research engineering project completed by Yunhan Wei with faculty and lab support"
     }
   },
   "roles": {
@@ -63,5 +64,5 @@
   },
   "link_ids": ["xr-drone-demo-1", "xr-drone-demo-2", "xr-drone-demo-3"],
   "sources": ["Owner-provided final report", "Three public Google Drive demonstrations"],
-  "questions": ["团队人数和其他成员分工是什么？", "是否有可公开的源代码仓库？"]
+  "questions": ["是否有可公开的源代码仓库？"]
 }
