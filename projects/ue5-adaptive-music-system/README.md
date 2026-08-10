@@ -16,7 +16,7 @@ This independently developed UE5 music-programming prototype separates one compo
 ## 已确认贡献 / Confirmed Contribution
 
 - 音乐系统设计 / Music systems design
-- UE5 程序开发 / UE5 programming
+- Blueprint 与 C++ 混合实现 / Hybrid Blueprint and C++ implementation
 - 环境与音乐的交互映射 / Interaction mapping between environments and music
 - 项目由魏允瀚独立完成 / Independently completed by Yunhan Wei
 
@@ -26,6 +26,6 @@ This independently developed UE5 music-programming prototype separates one compo
 
 ## 待确认 / Open Questions
 
-- 使用了哪些 UE5 音频系统、蓝图或代码技术？
+- 使用了哪些 UE5 音频系统或模块？
 - 不同环境元素分别如何触发或控制乐器层？
 - 音乐和音频素材的制作与授权来源是什么？
