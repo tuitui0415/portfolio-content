@@ -1,0 +1,16 @@
+{
+  "id": "slacker-simulator",
+  "title": {"zh": "Slacker Simulator", "en": "Slacker Simulator"},
+  "type": "team-project",
+  "status": "unknown",
+  "dates": {"start": "", "end": ""},
+  "team": {"size": null, "context": {"zh": "现有网站未说明", "en": "Not stated on the legacy portfolio"}},
+  "roles": {"zh": ["程序开发", "游戏设计"], "en": ["Programming", "Game Design"]},
+  "tools": [],
+  "summary": {"zh": "现有个人网站列出的程序与设计项目；当前 Google Drive 链接需要登录，无法匿名确认内容。", "en": "A programming and design project from the legacy portfolio whose current Google Drive link requires sign-in."},
+  "design": {"goals": {"zh": [], "en": []}, "mechanics": {"zh": [], "en": []}, "decisions": {"zh": [], "en": []}, "iteration": {"zh": [], "en": []}},
+  "copy": {"resume": {"zh": [], "en": []}, "website": {"zh": "", "en": ""}, "full": {"zh": "", "en": ""}},
+  "link_ids": ["slacker-simulator-drive"],
+  "sources": ["Legacy portfolio", "Restricted Google Drive link"],
+  "questions": ["项目内容、日期、团队、引擎和玩法是什么？", "你具体负责哪些程序与设计工作？", "是否可以将现有 Drive 文件设为知道链接的任何人可查看？"]
+}

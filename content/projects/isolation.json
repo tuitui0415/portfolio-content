@@ -1,0 +1,25 @@
+{
+  "id": "isolation",
+  "title": {"zh": "隔离", "en": "Isolation"},
+  "type": "solo-project",
+  "status": "completed-prototype",
+  "dates": {"start": "2021-12", "end": "2022-12"},
+  "team": {"size": 1, "context": {"zh": "个人项目；室友参与牌局试玩", "en": "Solo project; roommates supported card-game playtesting"}},
+  "roles": {"zh": ["游戏设计", "程序开发", "2D 角色美术", "3D 环境与道具", "UI 动画"], "en": ["Game Design", "Programming", "2D Character Art", "3D Environment and Props", "UI Animation"]},
+  "tools": ["Unity", "Photoshop", "Maya", "ZBrush", "Spine"],
+  "summary": {"zh": "以疫情封控下的孤独、自我认知和社会形象为主题的叙事卡牌游戏，玩家的对话选择会改变他人评价并影响牌局概率。", "en": "A narrative card game about loneliness, self-perception, and social identity during lockdown, where dialogue choices shape others' perceptions and influence card-game probabilities."},
+  "design": {
+    "goals": {"zh": ["探索孤独状态下个人如何看待自己与他人", "把角色形象从叙事概念转化为可影响牌局的系统"], "en": ["Explore how people see themselves and others under isolation", "Turn social identity from a narrative theme into a system that affects play"]},
+    "mechanics": {"zh": ["通过邻里对话塑造角色形象", "以德州扑克式概率判断和麻将视觉符号构成卡牌游戏", "角色形象动态改变弃牌成功概率", "镜子反馈角色的自我认知"], "en": ["Shape the protagonist's image through neighborhood dialogue", "Combine poker-like probability reading with mahjong-inspired card visuals", "Let social image modify the probability of discarding", "Use a mirror to reflect the character's self-perception"]},
+    "decisions": {"zh": ["用 3D 环境与 2D 角色的视觉冲突强化疏离感", "用鸟笼和竹子作为卡背意象连接束缚主题与麻将文化"], "en": ["Contrast 3D environments with 2D characters to reinforce alienation", "Use a birdcage and bamboo motif to connect confinement with mahjong imagery"]},
+    "iteration": {"zh": ["由室友试玩并调整牌局", "设计文档记录角色、室内外环境、卡牌和玩法流程"], "en": ["Playtested the card game with roommates", "Documented characters, indoor and outdoor environments, cards, and gameplay flow"]}
+  },
+  "copy": {
+    "resume": {"zh": ["独立设计并实现叙事卡牌玩法、角色形象系统与昼夜循环，并完成主要 2D/3D 资产。"], "en": ["Independently designed and implemented a narrative card game, social-image system, day-night loop, and most 2D/3D assets."]},
+    "website": {"zh": "《Isolation》把封控时期的孤独与自我凝视转化为叙事卡牌系统：玩家通过对话建立角色形象，这一形象会动态影响牌局中的弃牌概率，镜子则提供反向的自我认知反馈。", "en": "Isolation turns lockdown loneliness and self-scrutiny into a narrative card system: dialogue builds a social image that dynamically affects discard probability, while the mirror reflects that identity back to the player."},
+    "full": {"zh": "玩家扮演封控社区中的男性角色，通过与邻居交谈塑造他人眼中的自己，并参加以概率判断和对手形象分析为核心的牌局。项目由魏允瀚独立完成玩法机制、程序和大部分美术资产。", "en": "Players take the role of a man in a locked-down neighborhood, shaping how neighbors perceive him before entering a card game about probability and reading opponents. Yunhan Wei independently developed the mechanics, programming, and most art assets."}
+  },
+  "link_ids": ["isolation-visual-document", "isolation-design-statement"],
+  "sources": ["Isolation 11-page visual document", "Isolation Design Statement", "Legacy portfolio"],
+  "questions": ["是否存在可公开试玩的 Isolation 构建或演示视频？"]
+}

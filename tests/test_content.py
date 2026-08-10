@@ -84,5 +84,19 @@ class ContentValidationTests(unittest.TestCase):
         self.assertEqual(validate_repository(root), [])
 
 
+class RepositoryCompletenessTests(unittest.TestCase):
+    def test_all_existing_site_projects_are_imported(self):
+        expected = {
+            "isolation", "fishing-on-a-flat-earth", "smile-train-vr",
+            "mystery-room", "slacker-simulator", "psychotherapy",
+            "le-boulanger", "vango",
+        }
+        self.assertTrue(expected.issubset(load_project_ids(ROOT)))
+
+    def test_new_agent_projects_are_imported(self):
+        expected = {"rhythm-watershed", "modular-mining-game"}
+        self.assertTrue(expected.issubset(load_project_ids(ROOT)))
+
+
 if __name__ == "__main__":
     unittest.main()

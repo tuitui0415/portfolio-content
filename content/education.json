@@ -1,0 +1,17 @@
+[
+  {
+    "institution": "University of California, Davis",
+    "degree": {"zh": "计算机科学硕士（MSCS）", "en": "M.S. in Computer Science"},
+    "start": "2024-09",
+    "end": "2026-06",
+    "graduated": "2026-06-11"
+  },
+  {
+    "institution": "University of California, Santa Cruz",
+    "degree": {"zh": "计算机科学：游戏设计", "en": "B.S. in Computer Science: Computer Game Design"},
+    "start": "2019-09",
+    "end": "2023-06",
+    "gpa": "3.5/4.0",
+    "honor": "Dean's Honor Roll"
+  }
+]

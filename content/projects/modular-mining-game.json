@@ -1,0 +1,25 @@
+{
+  "id": "modular-mining-game",
+  "title": {"zh": "寻宝游戏", "en": "Modular Mining Game"},
+  "type": "solo-project",
+  "status": "technical-prototype",
+  "dates": {"start": "2026-07", "end": ""},
+  "team": {"size": 1, "context": {"zh": "个人项目，使用 Codex Agents 协作", "en": "Solo project developed with Codex Agents"}},
+  "roles": {"zh": ["游戏设计", "系统设计", "程序开发", "测试验证"], "en": ["Game Design", "Systems Design", "Programming", "Validation"]},
+  "tools": ["Go", "SQLite", "Godot Mod 设计", "Codex Agents"],
+  "summary": {"zh": "4-6 人实时风险决策游戏，将探险中的继续/退出选择、个性化报价、矿料加工和矿坑成长连接为长期循环。", "en": "A 4-6 player real-time risk-decision game connecting continue-or-exit expeditions, personalized pricing, material processing, and mine progression."},
+  "design": {
+    "goals": {"zh": ["用公开风险与私人报价制造玩家间决策张力", "让矿料加工和矿坑成长承接单局结算"], "en": ["Create decision tension through public risk and private pricing", "Connect match settlement to material processing and mine growth"]},
+    "mechanics": {"zh": ["35 张牌组、逐张继续或退出、4-6 人房间", "个性化报价、原子支付准备、矿料平面重复切割"], "en": ["35-card deck, card-by-card continue or exit decisions, and 4-6 player rooms", "Personalized pricing, atomic pay-and-ready, and repeatable planar material cuts"]},
+    "decisions": {"zh": ["房主、矿主和玩家身份分离", "服务器仅公开已暴露表面和允许观察的状态"], "en": ["Host, mine owner, and player identities are separate", "The server exposes only visible surfaces and allow-listed observable state"]},
+    "iteration": {"zh": ["以玩法测试矩阵区分已确认、未实现和需人工验证内容", "Terminal 原型演示连续两次报价、探险与加工循环"], "en": ["A gameplay matrix separates confirmed, missing, and manual-validation behavior", "The terminal prototype demonstrates two consecutive pricing, expedition, and processing loops"]}
+  },
+  "copy": {
+    "resume": {"zh": ["设计 4-6 人实时探险玩法，以继续/退出、个性化报价、矿料加工与矿坑成长构成风险收益循环。", "使用 Codex Agents 建立玩法规格与验证矩阵，通过权威服务器原型验证隐藏信息和结算一致性。"], "en": ["Designed a 4-6 player real-time expedition and progression loop.", "Used agent-assisted specifications and an authoritative prototype to validate hidden information and settlement consistency."]},
+    "website": {"zh": "《寻宝游戏》围绕多人探险中的继续与退出选择展开，并把私人报价、资源加工和矿坑成长连接为可扩展的长期系统。", "en": "Modular Mining Game centers on multiplayer continue-or-exit expedition choices and connects private pricing, resource processing, and mine growth into an extensible long-term system."},
+    "full": {"zh": "当前版本是 Go 权威核心技术原型，已实现多人房间、正式牌组、逐人报价、准备与开局、探险结算以及矿料重复切割。Godot 客户端和长期维护系统尚未完成。", "en": "The current Go authoritative-core prototype implements multiplayer rooms, the production deck, per-player quotes, readiness and match start, expedition settlement, and repeatable material cutting. The Godot client and long-term maintenance systems remain incomplete."}
+  },
+  "link_ids": ["modular-mining-game-repository"],
+  "sources": ["Repository README", "Approved design specification", "Confirmed gameplay scenario matrix"],
+  "questions": []
+}

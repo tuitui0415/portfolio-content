@@ -1,0 +1,16 @@
+{
+  "id": "fishing-on-a-flat-earth",
+  "title": {"zh": "Fishing on a Flat Earth", "en": "Fishing on a Flat Earth"},
+  "type": "game-jam",
+  "status": "in-development",
+  "dates": {"start": "", "end": ""},
+  "team": {"size": 7, "context": {"zh": "Game Jam 团队项目", "en": "Seven-person Game Jam team"}},
+  "roles": {"zh": ["3D 建模"], "en": ["3D Modeling"]},
+  "tools": [],
+  "summary": {"zh": "轻松的开放世界钓鱼原型，玩家探索无尽海域并寻找更适合捕鱼的位置。", "en": "A relaxing open-world fishing prototype about exploring an endless ocean for fish and better fishing locations."},
+  "design": {"goals": {"zh": [], "en": []}, "mechanics": {"zh": ["WASD 移动", "空格钓鱼", "海域探索"], "en": ["WASD movement", "Spacebar fishing", "Ocean exploration"]}, "decisions": {"zh": [], "en": []}, "iteration": {"zh": [], "en": []}},
+  "copy": {"resume": {"zh": [], "en": []}, "website": {"zh": "作为七人团队的 3D 建模成员，参与制作一款轻松的开放世界钓鱼原型。", "en": "Contributed 3D modeling to a seven-person team's relaxing open-world fishing prototype."}, "full": {"zh": "", "en": ""}},
+  "link_ids": ["fishing-flat-earth-itch"],
+  "sources": ["itch.io description and credits", "Legacy portfolio"],
+  "questions": ["项目的准确开发日期和 Game Jam 名称是什么？", "你具体制作了哪些 3D 模型或场景资产？", "使用了哪些引擎和建模工具？"]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "organization": {"zh": "江苏原力数字科技有限公司", "en": "Original Force"},
+    "role": {"zh": "图形开发工程师实习生", "en": "Graphics Engineering Intern"},
+    "start": "2025-07",
+    "end": "2025-08",
+    "summary": {"zh": "实现角色动作输入系统并优化动作开发流程；探索移动端 Gaussian Splatting 渲染方案。", "en": "Implemented a character motion input system, improved the animation workflow, and explored mobile Gaussian Splatting rendering."}
+  },
+  {
+    "organization": {"zh": "UC Davis Extended Reality Labs", "en": "UC Davis Extended Reality Labs"},
+    "role": {"zh": "Unity 开发 / 无人机 XR 项目", "en": "Unity Developer / Drone XR Project"},
+    "start": "2025-10",
+    "end": "2026-06",
+    "summary": {"zh": "开发与实体四轴飞行器联动的 VR 游戏，参与交互设计和无人机控制与 VR 系统集成。", "en": "Developed a VR game connected to a physical quadcopter, contributing interaction design and drone-to-VR integration."}
+  },
+  {
+    "organization": {"zh": "Smile Train VR / UCSC ASSIST Lab", "en": "Smile Train VR / UCSC ASSIST Lab"},
+    "role": {"zh": "VR 教育游戏开发", "en": "VR Educational Game Developer"},
+    "start": "2022-03",
+    "end": "2023-03",
+    "summary": {"zh": "面向唇腭裂青少年开发 VR 教育与心理支持游戏，实现对话、文字、场景导航及 Photon 多人交互。", "en": "Developed dialogue, text, navigation, and Photon multiplayer interaction for a VR educational and psychosocial support game."}
+  }
+]

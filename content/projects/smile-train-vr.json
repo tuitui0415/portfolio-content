@@ -1,0 +1,16 @@
+{
+  "id": "smile-train-vr",
+  "title": {"zh": "Smile Train VR", "en": "Smile Train VR"},
+  "type": "research-project",
+  "status": "user-testing-reported-in-2023",
+  "dates": {"start": "2022-03", "end": "2023-03"},
+  "team": {"size": null, "context": {"zh": "UCSC ASSIST Lab 与 Smile Train 合作项目", "en": "UCSC ASSIST Lab collaboration with Smile Train"}},
+  "roles": {"zh": ["程序开发"], "en": ["Programming"]},
+  "tools": ["Unity", "Photon"],
+  "summary": {"zh": "面向唇腭裂青少年的双人 VR 教育与心理支持游戏，通过生活情境帮助建立自信和社会情感能力。", "en": "A two-player VR educational and psychosocial support game helping young people with cleft conditions build confidence through real-life simulations."},
+  "design": {"goals": {"zh": ["支持自信、自尊和社会情感能力培养"], "en": ["Support confidence, self-esteem, and socioemotional skills"]}, "mechanics": {"zh": ["双人 VR 交互", "对话、文字和场景导航"], "en": ["Two-player VR interaction", "Dialogue, text, and scene navigation"]}, "decisions": {"zh": [], "en": []}, "iteration": {"zh": ["UCSC 报道称项目于 2023 年处于多国用户测试阶段"], "en": ["A 2023 UCSC article reported user testing across multiple countries"]}},
+  "copy": {"resume": {"zh": ["实现对话、文字、场景导航和 Photon 多人交互，参与面向唇腭裂青少年的 VR 支持游戏开发。"], "en": ["Implemented dialogue, text, navigation, and Photon multiplayer interaction for a VR support game."]}, "website": {"zh": "", "en": ""}, "full": {"zh": "", "en": ""}},
+  "link_ids": ["smile-train-ucsc-article"],
+  "sources": ["UCSC Baskin School of Engineering article", "Confirmed resume facts", "Legacy portfolio"],
+  "questions": ["你负责的具体模块、功能边界和开发过程是什么？", "是否有可公开的项目截图、视频或个人贡献证明？", "团队规模及合作方式是什么？"]
+}

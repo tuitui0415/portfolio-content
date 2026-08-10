@@ -1,0 +1,178 @@
+[
+  {
+    "id": "legacy-portfolio-site",
+    "label": {"zh": "原 Google Sites 个人网站", "en": "Legacy Google Sites Portfolio"},
+    "url": "https://sites.google.com/view/yunhanwei/home",
+    "project_id": "",
+    "type": "portfolio",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous HTTP 200; page content and external anchors were readable.",
+    "action": "keep-as-source"
+  },
+  {
+    "id": "personal-project-repository",
+    "label": {"zh": "旧编程项目仓库", "en": "Legacy Programming Repository"},
+    "url": "https://github.com/tuitui0415/Personal-Project",
+    "project_id": "",
+    "type": "source-code",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous git clone succeeded; repository contains RSA, Huffman, and GFW coursework folders.",
+    "action": "keep-and-add-context"
+  },
+  {
+    "id": "rhythm-watershed-repository",
+    "label": {"zh": "节奏流域源码与发布", "en": "Rhythm Watershed Repository and Releases"},
+    "url": "https://github.com/tuitui0415/rhythm-watershed",
+    "project_id": "rhythm-watershed",
+    "type": "source-code",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous git clone succeeded.",
+    "action": "keep"
+  },
+  {
+    "id": "modular-mining-game-repository",
+    "label": {"zh": "寻宝游戏源码", "en": "Modular Mining Game Repository"},
+    "url": "https://github.com/tuitui0415/modular-mining-game",
+    "project_id": "modular-mining-game",
+    "type": "source-code",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous git clone succeeded.",
+    "action": "keep"
+  },
+  {
+    "id": "vango-figma-prototype",
+    "label": {"zh": "Vango Figma 原型", "en": "Vango Figma Prototype"},
+    "url": "https://www.figma.com/proto/S0ofI0PepqpRCAerBlB1B1/Vango?type=design&node-id=10-106&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A106&mode=design",
+    "project_id": "vango",
+    "type": "design-prototype",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous page returned Figma metadata with the title Vango.",
+    "action": "keep-and-add-context"
+  },
+  {
+    "id": "final-video-drive",
+    "label": {"zh": "Final Video", "en": "Final Video"},
+    "url": "https://drive.google.com/file/d/1j6MyazBWYD8wOGdFHYAluxUSxuqQNeD_/view?usp=drive_link",
+    "project_id": "",
+    "type": "video",
+    "access": "unclear",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous page exposes the filename Final Video.mkv; playback was not independently verified.",
+    "action": "confirm-project-and-playback"
+  },
+  {
+    "id": "isolation-visual-document",
+    "label": {"zh": "Isolation 视觉设计文档", "en": "Isolation Visual Design Document"},
+    "url": "https://drive.google.com/file/d/1SEBVq1tOxz-1lweje8nkngqTqY_Bn2m3/view?usp=sharing",
+    "project_id": "isolation",
+    "type": "design-document",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous direct download completed; PDF has 11 visual pages.",
+    "action": "keep"
+  },
+  {
+    "id": "isolation-design-statement",
+    "label": {"zh": "Isolation Design Statement", "en": "Isolation Design Statement"},
+    "url": "https://drive.google.com/file/d/1kZ1-mCWSzTHHQrL927XHEK28RMFib7OO/view?usp=sharing",
+    "project_id": "isolation",
+    "type": "design-document",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous direct download completed; one-page PDF text was extractable.",
+    "action": "keep"
+  },
+  {
+    "id": "smile-train-ucsc-article",
+    "label": {"zh": "UCSC Smile Train 项目报道", "en": "UCSC Smile Train Project Article"},
+    "url": "https://engineering.ucsc.edu/news/tiffany-thang-student-spotlight/",
+    "project_id": "smile-train-vr",
+    "type": "press",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous HTTP 200; article text was readable.",
+    "action": "keep"
+  },
+  {
+    "id": "fishing-flat-earth-itch",
+    "label": {"zh": "Fishing on a Flat Earth 试玩页", "en": "Fishing on a Flat Earth itch.io Page"},
+    "url": "https://h-ma.itch.io/jam-2-team-20-prototyping-assignment",
+    "project_id": "fishing-on-a-flat-earth",
+    "type": "playable-build",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous HTTP 200; description, credits, and download entry were readable.",
+    "action": "keep"
+  },
+  {
+    "id": "mystery-room-drive",
+    "label": {"zh": "Mystery Room 构建包", "en": "Mystery Room Build Archive"},
+    "url": "https://drive.google.com/file/d/1OazxxEApoFRHbq3TmDtY3ZZUKWghdya3/view?usp=drive_link",
+    "project_id": "mystery-room",
+    "type": "build-archive",
+    "access": "unclear",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous page exposes the filename Mystery_Room.zip; archive download was not tested.",
+    "action": "verify-download"
+  },
+  {
+    "id": "slacker-simulator-drive",
+    "label": {"zh": "Slacker Simulator 文件", "en": "Slacker Simulator File"},
+    "url": "https://drive.google.com/file/d/1o6lnCoU20aBDhhU_U137xr4tEnEBkj53/view?usp=sharing",
+    "project_id": "slacker-simulator",
+    "type": "project-file",
+    "access": "restricted",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous response requires Google sign-in or cookie access.",
+    "action": "fix-sharing"
+  },
+  {
+    "id": "psychotherapy-playable-page",
+    "label": {"zh": "psychotherapy Ink 网页", "en": "psychotherapy Ink Web Build"},
+    "url": "https://weitiange.github.io/DefensiveCharaterWriting/",
+    "project_id": "psychotherapy",
+    "type": "playable-build",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous HTTP 200; Ink controls and text were readable.",
+    "action": "keep-and-add-context"
+  },
+  {
+    "id": "le-boulanger-playable-page",
+    "label": {"zh": "Le Boulanger / Hell's Bakery 网页", "en": "Le Boulanger / Hell's Bakery Web Build"},
+    "url": "https://muffing21.github.io/endgame/",
+    "project_id": "le-boulanger",
+    "type": "playable-build",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Anonymous HTTP 200; page title is Hell's Bakery.",
+    "action": "keep-and-add-context"
+  },
+  {
+    "id": "instagram-profile",
+    "label": {"zh": "Instagram", "en": "Instagram"},
+    "url": "https://www.instagram.com/tuitui0415/",
+    "project_id": "",
+    "type": "social",
+    "access": "unclear",
+    "checked_at": "2026-08-10",
+    "evidence": "Listed by the legacy portfolio; anonymous profile visibility still requires a live check.",
+    "action": "verify"
+  },
+  {
+    "id": "contact-email",
+    "label": {"zh": "联系邮箱", "en": "Contact Email"},
+    "url": "mailto:yunhanwei0415@gmail.com",
+    "project_id": "",
+    "type": "contact",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Public mailto link from the legacy portfolio.",
+    "action": "keep"
+  }
+]

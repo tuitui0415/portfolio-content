@@ -1,0 +1,25 @@
+{
+  "id": "rhythm-watershed",
+  "title": {"zh": "节奏流域", "en": "Rhythm Watershed"},
+  "type": "solo-project",
+  "status": "playable-vertical-slice",
+  "dates": {"start": "2026-07", "end": ""},
+  "team": {"size": 1, "context": {"zh": "个人项目，使用 Codex Agents 协作", "en": "Solo project developed with Codex Agents"}},
+  "roles": {"zh": ["游戏设计", "系统设计", "程序开发", "测试验证"], "en": ["Game Design", "Systems Design", "Programming", "Validation"]},
+  "tools": ["Godot 4.7", "GDScript", "GUT", "Codex Agents"],
+  "summary": {"zh": "模块化 3D 节奏钓鱼游戏，玩家在持续世界节拍中航行、选择钓点，并通过鱼竿、环境节奏与鱼类性格完成捕获。", "en": "A modular 3D rhythm-fishing game where players navigate a continuous world beat and combine rods, environmental rhythm, and fish personalities to make a catch."},
+  "design": {
+    "goals": {"zh": ["让玩家在五分钟内理解并完成首轮钓鱼闭环", "用水域节奏和鱼类行为形成区域差异"], "en": ["Teach and complete the first fishing loop within five minutes", "Create regional differentiation through rhythm and fish behavior"]},
+    "mechanics": {"zh": ["码头、航行、抛竿、等待、角力、收竿、出售和升级", "环境 BPM、节奏卡、鱼类性格和鱼竿增益"], "en": ["Dock, navigation, cast, wait, struggle, reel, sell, and upgrade", "Environmental BPM, rhythm cards, fish personalities, and rod bonuses"]},
+    "decisions": {"zh": ["世界节拍在航行与钓鱼之间持续，抛竿后冻结本次环境快照", "表现层只消费领域事件，不反向决定玩法结果"], "en": ["The world beat continues between navigation and fishing, while each cast freezes an environment snapshot", "Presentation consumes domain events without deciding gameplay outcomes"]},
+    "iteration": {"zh": ["使用虚拟时间和固定种子验证节奏与随机性", "通过完整 Godot 检查和试玩包验证垂直切片"], "en": ["Validated rhythm and randomness with virtual time and fixed seeds", "Verified the slice through the full Godot gate and distributable builds"]}
+  },
+  "copy": {
+    "resume": {"zh": ["独立设计并实现模块化 3D 节奏钓鱼游戏，以环境 BPM、鱼类性格与鱼竿效果塑造不同水域的玩法差异。", "构建码头到升级的完整闭环，并使用 Codex Agents 推进规格、原型与自动化测试。"], "en": ["Designed and built a modular 3D rhythm-fishing game with region-specific play patterns.", "Built the complete dock-to-upgrade loop with agent-assisted specifications and validation."]},
+    "website": {"zh": "《节奏流域》把钓鱼拆成航行选择与四阶段节奏挑战，并通过环境 BPM、鱼类性格和鱼竿增益让不同水域形成可读的玩法差异。", "en": "Rhythm Watershed combines navigational choice with a four-stage rhythm challenge, using environmental BPM, fish personalities, and rod bonuses to make each region play differently."},
+    "full": {"zh": "这是一个可运行的模块化 3D 节奏钓鱼垂直切片。玩家从码头出发，在湖泊和河流间选择钓点，通过抛竿、等待、角力和收竿完成捕获，再将鱼出售并购买新鱼竿。", "en": "This playable modular 3D rhythm-fishing vertical slice takes players from the dock into lakes and rivers, through casting, waiting, struggle, reeling, selling, and rod upgrades."}
+  },
+  "link_ids": ["rhythm-watershed-repository"],
+  "sources": ["Repository README", "Approved design specifications", "GitHub release v0.1.0"],
+  "questions": []
+}
