@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
-
 :root {
   --ink: #edf0df;
   --ink-muted: #a8b3a6;
@@ -14,8 +12,8 @@
   --coral: #ce765e;
   --line: rgba(214, 168, 95, .3);
   --shadow: 0 24px 70px rgba(0, 0, 0, .36);
-  --serif: 'Playfair Display', 'Songti SC', 'STSong', serif;
-  --sans: 'Noto Sans SC', Inter, system-ui, sans-serif;
+  --serif: 'Iowan Old Style', Baskerville, 'Songti SC', 'STSong', Georgia, serif;
+  --sans: 'PingFang SC', 'Noto Sans CJK SC', Inter, system-ui, sans-serif;
   --mono: 'DM Mono', 'SFMono-Regular', Consolas, monospace;
   color-scheme: dark;
 }
@@ -86,7 +84,7 @@ main { min-height: calc(100vh - 90px); }
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 
 @media (max-width: 760px) {
-  .site-header { grid-template-columns: 1fr auto; min-height: 62px; }
+  .site-header { grid-template-columns: 1fr auto; min-height: 62px; backdrop-filter: none; }
   .brand-name { display: none; }
   .site-nav {
     position: fixed; inset: auto 0 0; z-index: 90; justify-content: space-around; gap: .2rem;

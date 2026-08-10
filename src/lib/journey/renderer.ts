@@ -115,27 +115,44 @@ export function createJourneyRenderer(
     context.save();
     context.translate(x, y);
     context.scale(flip, 1);
-    context.fillStyle = 'rgba(0,0,0,.35)';
-    context.fillRect(-21, 4, 45, 7);
-    context.fillStyle = '#171917';
-    context.fillRect(-13, -22, 10, 23); context.fillRect(5, -22, 10, 23);
-    context.fillStyle = '#142b24';
-    context.fillRect(-22, -78, 42, 58);
-    context.fillStyle = '#1d4034';
-    context.fillRect(-17, -75, 29, 47);
-    context.fillStyle = '#d2a45d';
-    context.fillRect(-4, -72, 3, 38);
-    context.fillStyle = '#6a4632';
-    context.fillRect(12, -63, 13, 31);
-    context.fillStyle = '#d5aa85';
-    context.fillRect(-13, -101, 27, 24);
-    context.fillStyle = '#171a19';
-    context.fillRect(-16, -105, 31, 10); context.fillRect(-16, -97, 7, 12);
-    context.fillStyle = '#d6a85f';
-    context.fillRect(6, -93, 9, 2); context.fillRect(-4, -93, 8, 2);
-    context.strokeStyle = '#d6a85f';
-    context.lineWidth = 2;
-    context.strokeRect(18, -66, 14, 21);
+    context.fillStyle = 'rgba(0,0,0,.38)';
+    context.fillRect(-24, 4, 51, 7);
+    // boots and tapered trousers
+    context.fillStyle = '#111615';
+    context.beginPath(); context.moveTo(-15, -31); context.lineTo(-2, -31); context.lineTo(-5, 1); context.lineTo(-16, 1); context.fill();
+    context.beginPath(); context.moveTo(3, -31); context.lineTo(15, -29); context.lineTo(18, 1); context.lineTo(6, 1); context.fill();
+    context.fillStyle = '#24221e'; context.fillRect(-19, -3, 16, 5); context.fillRect(6, -3, 17, 5);
+    // long archivist coat with an asymmetric hem
+    context.fillStyle = '#0f2922';
+    context.beginPath();
+    context.moveTo(-18, -78); context.lineTo(17, -78); context.lineTo(23, -58); context.lineTo(18, -25);
+    context.lineTo(8, -18); context.lineTo(0, -36); context.lineTo(-9, -17); context.lineTo(-23, -25); context.lineTo(-24, -58); context.closePath(); context.fill();
+    context.fillStyle = '#1d4538';
+    context.beginPath(); context.moveTo(-14, -74); context.lineTo(3, -78); context.lineTo(10, -39); context.lineTo(-2, -32); context.lineTo(-14, -42); context.closePath(); context.fill();
+    // sleeves and hands
+    context.fillStyle = '#16372e';
+    context.beginPath(); context.moveTo(-19, -72); context.lineTo(-29, -58); context.lineTo(-32, -39); context.lineTo(-24, -36); context.lineTo(-16, -60); context.fill();
+    context.beginPath(); context.moveTo(16, -70); context.lineTo(29, -57); context.lineTo(28, -39); context.lineTo(20, -40); context.lineTo(10, -60); context.fill();
+    context.fillStyle = '#c99673'; context.fillRect(-31, -41, 8, 8); context.fillRect(22, -42, 8, 8);
+    // lapels, buttons, satchel strap and catalogue bag
+    context.fillStyle = '#d2a45d'; context.fillRect(-2, -72, 2, 39); context.fillRect(2, -66, 3, 3); context.fillRect(2, -55, 3, 3); context.fillRect(2, -44, 3, 3);
+    context.strokeStyle = '#7b5034'; context.lineWidth = 4; context.beginPath(); context.moveTo(-12, -77); context.lineTo(19, -36); context.stroke();
+    context.fillStyle = '#68422e'; context.fillRect(17, -49, 16, 25); context.fillStyle = '#b58347'; context.fillRect(19, -46, 12, 2); context.fillRect(19, -30, 12, 2);
+    // neck and face
+    context.fillStyle = '#bc805e'; context.fillRect(-6, -84, 12, 9);
+    context.fillStyle = '#d5a27e';
+    context.beginPath(); context.moveTo(-13, -103); context.lineTo(10, -105); context.lineTo(16, -96); context.lineTo(10, -82); context.lineTo(-10, -82); context.lineTo(-16, -93); context.closePath(); context.fill();
+    // layered hair silhouette
+    context.fillStyle = '#111616';
+    context.fillRect(-17, -106, 30, 8); context.fillRect(-14, -110, 23, 7); context.fillRect(-18, -101, 7, 12); context.fillRect(8, -103, 8, 11);
+    context.fillRect(-8, -112, 7, 6); context.fillRect(2, -111, 8, 6);
+    // glasses and eye highlight
+    context.strokeStyle = '#d4b16c'; context.lineWidth = 1;
+    context.strokeRect(-11, -98, 9, 5); context.strokeRect(2, -98, 9, 5); context.fillStyle = '#d4b16c'; context.fillRect(-2, -96, 4, 1);
+    context.fillStyle = '#f0d5a1'; context.fillRect(8, -96, 1, 1);
+    // glowing archive book in the forward hand
+    context.fillStyle = '#8c5a32'; context.fillRect(-38, -56, 12, 20); context.strokeStyle = '#e2b861'; context.lineWidth = 2; context.strokeRect(-39, -57, 14, 22);
+    context.shadowColor = '#d6a85f'; context.shadowBlur = 10; context.fillStyle = '#f0d59c'; context.fillRect(-35, -53, 6, 14); context.shadowBlur = 0;
     context.restore();
   };
 

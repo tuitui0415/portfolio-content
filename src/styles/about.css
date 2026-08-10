@@ -22,7 +22,7 @@
 .dossier-grid { border-inline: 1px solid rgba(214,168,95,.16); }
 .dossier-section { display: grid; grid-template-columns: 90px 1fr; gap: clamp(1.5rem, 5vw, 5rem); padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 5vw, 5rem); border-bottom: 1px solid rgba(214,168,95,.16); }
 .dossier-section > div:last-child { max-width: 1050px; }
-.section-number { color: #50625a; font: 400 .68rem var(--mono); letter-spacing: .12em; }
+.section-number { color: #879990; font: 400 .68rem var(--mono); letter-spacing: .12em; }
 .record-list { position: relative; display: grid; gap: 0; margin: 3rem 0 0; padding: 0; list-style: none; }
 .record-list::before { content: ''; position: absolute; left: 7px; top: 9px; bottom: 20px; width: 1px; background: var(--line); }
 .record-list li { position: relative; padding: 0 0 3.5rem 3rem; }
@@ -40,7 +40,7 @@
 .contact-list a { display: grid; gap: .45rem; padding: 1.4rem 0; border-bottom: 1px solid var(--line); text-decoration: none; }
 .contact-list a:nth-child(odd) { padding-right: 2rem; }
 .contact-list a:nth-child(even) { padding-left: 2rem; border-left: 1px solid var(--line); }
-.contact-list span { color: #687b71; font: 400 .58rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.contact-list span { color: #84978d; font: 400 .58rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
 .contact-list b { font-weight: 500; overflow-wrap: anywhere; }
 .contact-list a:hover b { color: var(--brass); }
 

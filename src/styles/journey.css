@@ -3,7 +3,7 @@
 .journey-heading { display: grid; grid-template-columns: 1.4fr .6fr; gap: 3rem; align-items: end; padding: 2rem clamp(.5rem, 3vw, 3rem) 2.5rem; }
 .journey-heading h1 { max-width: 900px; margin: 0; font: 500 clamp(2.7rem, 6vw, 6.2rem)/.98 var(--serif); letter-spacing: -.045em; }
 .journey-heading > p { max-width: 32rem; margin: 0; color: #96a49b; }
-.journey-stage { position: relative; height: clamp(570px, 68vh, 780px); min-height: 520px; border: 1px solid var(--line); background: #09110f; box-shadow: var(--shadow); overflow: hidden; }
+.journey-stage { position: relative; height: clamp(520px, 58vh, 650px); min-height: 500px; border: 1px solid var(--line); background: #09110f; box-shadow: var(--shadow); overflow: hidden; }
 .journey-stage canvas { display: block; width: 100%; height: 100%; }
 .journey-hud { position: absolute; inset: 0; pointer-events: none; }
 .journey-controls-copy { position: absolute; top: 1rem; left: 1rem; margin: 0; padding: .45rem .65rem; color: #9fa99f; background: rgba(8,14,13,.76); border: 1px solid rgba(214,168,95,.22); font: .58rem var(--mono); letter-spacing: .06em; }
@@ -26,7 +26,7 @@
 .catalogue-year { position: absolute; top: -.2rem; left: 0; color: var(--brass); font: 500 .6rem var(--mono); letter-spacing: .12em; }
 .catalogue-entry button { position: relative; display: grid; gap: .25rem; width: 164px; min-height: 78px; padding: 1.2rem .7rem .6rem; border: 0; color: #89988f; background: transparent; text-align: left; cursor: pointer; }
 .catalogue-entry button i { position: absolute; z-index: 2; top: .76rem; left: .7rem; width: 8px; height: 8px; border: 2px solid var(--accent); background: #0d1714; transform: rotate(45deg); }
-.catalogue-entry button small { font: .52rem var(--mono); color: #5f7167; }.catalogue-entry button b { font: 500 .72rem/1.3 var(--sans); }
+.catalogue-entry button small { font: .52rem var(--mono); color: #82968b; }.catalogue-entry button b { font: 500 .72rem/1.3 var(--sans); }
 .catalogue-entry button:hover, .catalogue-entry button[aria-current] { color: var(--paper); background: rgba(214,168,95,.07); }
 .catalogue-entry button[aria-current] i { background: var(--accent); box-shadow: 0 0 15px var(--accent); }
 
@@ -35,7 +35,7 @@
 .journey-fallback ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 0; padding: 0; border-top: 1px solid rgba(214,168,95,.14); list-style: none; }
 .journey-fallback li { display: grid; grid-template-columns: 58px 1fr; gap: .35rem .7rem; padding: 1rem; border-right: 1px solid rgba(214,168,95,.12); border-bottom: 1px solid rgba(214,168,95,.12); }
 .journey-fallback time { color: var(--brass); font: .52rem var(--mono); }.journey-fallback a { font: 500 .82rem var(--serif); text-decoration: none; }.journey-fallback a:hover { color: var(--brass); }
-.journey-fallback li span { grid-column: 2; color: #5f7167; font: .5rem var(--mono); text-transform: uppercase; }
+.journey-fallback li span { grid-column: 2; color: #82968b; font: .5rem var(--mono); text-transform: uppercase; }
 
 @media (pointer: coarse), (max-width: 760px) { .touch-controls { display: flex; } .journey-controls-copy { display: none; } }
 @media (max-width: 760px) {
@@ -43,6 +43,7 @@
   .journey-heading { grid-template-columns: 1fr; gap: 1rem; padding: 1.5rem .5rem; }
   .journey-heading h1 { font-size: clamp(2.5rem, 13vw, 4.5rem); }
   .journey-stage { height: 720px; }
+  .touch-controls { position: fixed; z-index: 80; bottom: calc(68px + env(safe-area-inset-bottom)); }
   .arrival-card { top: .8rem; right: .8rem; width: calc(100% - 1.6rem); }
   .arrival-card p { -webkit-line-clamp: 2; }
   .journey-fallback ol { grid-template-columns: 1fr; }
