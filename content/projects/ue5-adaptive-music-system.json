@@ -1,6 +1,6 @@
 {
   "id": "ue5-adaptive-music-system",
-  "title": {"zh": "UE5 自适应分层音乐系统（暂定）", "en": "UE5 Adaptive Layered Music System (Working Title)"},
+  "title": {"zh": "UE5 自适应分层音乐系统", "en": "UE5 Adaptive Layered Music System"},
   "type": "solo-project",
   "status": "video-demonstrated-prototype",
   "dates": {"start": "", "end": ""},
@@ -24,5 +24,5 @@
   },
   "link_ids": ["final-video-drive"],
   "sources": ["Owner statement", "Public Final Video demonstration"],
-  "questions": ["项目的正式中英文名称是什么？", "项目的准确开发时间是什么？", "使用了哪些 UE5 音频系统、蓝图或代码技术？", "不同环境元素分别如何触发或控制乐器层？", "音乐和音频素材是否由你制作，或来自可公开使用的第三方素材？"]
+  "questions": ["项目的准确开发时间是什么？", "使用了哪些 UE5 音频系统、蓝图或代码技术？", "不同环境元素分别如何触发或控制乐器层？", "音乐和音频素材是否由你制作，或来自可公开使用的第三方素材？"]
 }

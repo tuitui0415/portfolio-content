@@ -1,4 +1,4 @@
-# UE5 自适应分层音乐系统（暂定） / UE5 Adaptive Layered Music System
+# UE5 自适应分层音乐系统 / UE5 Adaptive Layered Music System
 
 ## 中文概述
 
@@ -21,7 +21,7 @@ This independently developed UE5 music-programming prototype separates one compo
 
 ## 待确认 / Open Questions
 
-- 项目的正式中英文名称和准确开发时间是什么？
+- 项目的准确开发时间是什么？
 - 使用了哪些 UE5 音频系统、蓝图或代码技术？
 - 不同环境元素分别如何触发或控制乐器层？
 - 音乐和音频素材的制作与授权来源是什么？
