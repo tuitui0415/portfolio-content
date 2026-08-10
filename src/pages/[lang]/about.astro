@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AboutDossier from '../../components/AboutDossier.astro';
+import { loadPortfolio, localizePortfolio } from '../../lib/content/load';
+import type { Locale } from '../../lib/content/types';
+import '../../styles/about.css';
+
+export function getStaticPaths() {
+  return (['zh', 'en'] as Locale[]).map((lang) => ({ params: { lang } }));
+}
+const locale = Astro.params.lang as Locale;
+const portfolio = localizePortfolio(loadPortfolio(), locale);
+---
+
+<BaseLayout locale={locale} title={`${locale === 'zh' ? '个人档案' : 'About'} · ${portfolio.profile.name}`} description={portfolio.profile.positioning} bodyClass="about-page">
+  <AboutDossier locale={locale} portfolio={portfolio} />
+</BaseLayout>

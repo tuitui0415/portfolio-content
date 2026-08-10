@@ -1,0 +1,54 @@
+.about-page { background: #0c1412; }
+.about-dossier { max-width: 1440px; margin: 0 auto; padding: 126px clamp(1.2rem, 5vw, 5rem) 5rem; }
+.dossier-hero {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, .5fr); gap: clamp(3rem, 8vw, 9rem);
+  align-items: end; min-height: 560px; padding: clamp(2rem, 6vw, 5.5rem); border: 1px solid var(--line); overflow: hidden;
+  background:
+    linear-gradient(110deg, rgba(17,27,24,.96), rgba(17,27,24,.75)),
+    repeating-linear-gradient(90deg, transparent 0 79px, rgba(214,168,95,.045) 80px);
+  box-shadow: var(--shadow);
+}
+.dossier-hero::before { content: 'DOSSIER'; position: absolute; top: -1.3rem; right: -1rem; color: rgba(232,221,189,.025); font: 600 clamp(7rem, 20vw, 18rem)/1 var(--serif); }
+.dossier-hero .display-title { font-size: clamp(4rem, 10vw, 9rem); }
+.dossier-lede { max-width: 48rem; margin: 1.8rem 0 2rem; color: #b7c0b6; font-size: clamp(1rem, 1.5vw, 1.25rem); }
+.dossier-actions { display: flex; flex-wrap: wrap; gap: .9rem; }
+.identity-card { position: relative; padding: 1.5rem; color: var(--night); background: var(--paper); box-shadow: 12px 14px 0 #4a3725; transform: rotate(1deg); }
+.identity-card > span { font: 500 .58rem var(--mono); letter-spacing: .18em; }
+.identity-card > strong { display: block; margin: 2rem 0; font: 500 clamp(1.25rem, 2vw, 2rem)/1.15 var(--mono); letter-spacing: -.04em; }
+.identity-card dl { display: grid; gap: .55rem; margin: 0; padding-top: 1rem; border-top: 1px solid rgba(10,16,15,.3); }
+.identity-card dl div { display: flex; justify-content: space-between; gap: 1rem; }
+.identity-card dt, .identity-card dd { margin: 0; font: 500 .55rem var(--mono); letter-spacing: .08em; }
+
+.dossier-grid { border-inline: 1px solid rgba(214,168,95,.16); }
+.dossier-section { display: grid; grid-template-columns: 90px 1fr; gap: clamp(1.5rem, 5vw, 5rem); padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 5vw, 5rem); border-bottom: 1px solid rgba(214,168,95,.16); }
+.dossier-section > div:last-child { max-width: 1050px; }
+.section-number { color: #50625a; font: 400 .68rem var(--mono); letter-spacing: .12em; }
+.record-list { position: relative; display: grid; gap: 0; margin: 3rem 0 0; padding: 0; list-style: none; }
+.record-list::before { content: ''; position: absolute; left: 7px; top: 9px; bottom: 20px; width: 1px; background: var(--line); }
+.record-list li { position: relative; padding: 0 0 3.5rem 3rem; }
+.record-list li::before { content: ''; position: absolute; left: 3px; top: .55rem; width: 9px; height: 9px; border: 1px solid var(--brass); background: var(--archive); box-shadow: 0 0 0 5px var(--archive); }
+.record-list time { color: var(--brass); font: 400 .68rem var(--mono); letter-spacing: .08em; }
+.record-list h3 { margin: .45rem 0 .25rem; font: 500 clamp(1.3rem, 2.5vw, 2.1rem)/1.25 var(--serif); }
+.record-list p { max-width: 50rem; margin: .4rem 0 0; color: #98a69d; }
+.record-list .record-role { color: var(--paper); font-size: .9rem; }
+.record-list small { display: inline-block; margin-top: .7rem; padding: .25rem .45rem; color: #b6c1b7; border: 1px solid rgba(95,162,147,.35); font: 400 .6rem var(--mono); letter-spacing: .06em; }
+.skill-groups { display: grid; grid-template-columns: 1fr 1.5fr; gap: 1rem; margin-top: 3rem; }
+.skill-groups > div { padding: 1.8rem; border: 1px solid rgba(214,168,95,.18); background: rgba(23,37,31,.55); }
+.skill-groups h3 { margin: 0 0 1rem; color: var(--brass); font: 500 .7rem var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+.skill-groups p { margin: 0; color: #aeb8ae; }
+.contact-list { display: grid; grid-template-columns: 1fr 1fr; margin-top: 3rem; font-style: normal; border-top: 1px solid var(--line); }
+.contact-list a { display: grid; gap: .45rem; padding: 1.4rem 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.contact-list a:nth-child(odd) { padding-right: 2rem; }
+.contact-list a:nth-child(even) { padding-left: 2rem; border-left: 1px solid var(--line); }
+.contact-list span { color: #687b71; font: 400 .58rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.contact-list b { font-weight: 500; overflow-wrap: anywhere; }
+.contact-list a:hover b { color: var(--brass); }
+
+@media (max-width: 760px) {
+  .about-dossier { padding: 92px .8rem 3rem; }
+  .dossier-hero { grid-template-columns: 1fr; min-height: 0; padding: 2.2rem 1.25rem; }
+  .identity-card { max-width: 330px; }
+  .dossier-section { grid-template-columns: 1fr; gap: 1rem; padding: 4rem 1.2rem; }
+  .skill-groups, .contact-list { grid-template-columns: 1fr; }
+  .contact-list a:nth-child(odd), .contact-list a:nth-child(even) { padding-inline: 0; border-left: 0; }
+}

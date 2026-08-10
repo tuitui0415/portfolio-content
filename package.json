@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "python3 scripts/check_content.py && astro check && astro build",
+    "prepare:assets": "python3 scripts/prepare_site_assets.py",
+    "build": "npm run prepare:assets && python3 scripts/check_content.py && astro check && astro build",
     "preview": "astro preview",
     "check": "astro check",
     "test": "vitest run",

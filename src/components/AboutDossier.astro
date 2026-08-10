@@ -1,0 +1,104 @@
+---
+import type { Locale, LocalizedPortfolio } from '../lib/content/types';
+
+interface Props { locale: Locale; portfolio: LocalizedPortfolio }
+const { locale, portfolio } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const isZh = locale === 'zh';
+const month = (value: string) => {
+  const [year, rawMonth] = value.split('-');
+  if (isZh) return `${year}.${rawMonth}`;
+  return new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', timeZone: 'UTC' })
+    .format(new Date(`${value}-01T00:00:00Z`));
+};
+const graduate = isZh ? '2026 年 6 月 11 日毕业' : 'Graduated June 11, 2026';
+const tools = [...new Set(portfolio.projects.flatMap((project) => project.tools))]
+  .filter((tool) => !tool.toLowerCase().includes('agent'))
+  .slice(0, 18);
+---
+
+<article class="about-dossier">
+  <header class="dossier-hero">
+    <div>
+      <p class="eyebrow">{isZh ? '设计师档案 · 馆藏 0415' : 'DESIGNER DOSSIER · FILE 0415'}</p>
+      <h1 class="display-title">{portfolio.profile.name}</h1>
+      <p class="dossier-lede">
+        {isZh
+          ? '游戏设计师与开发者。关注空间引导、系统反馈，以及玩家如何从一次选择中读懂整个世界。'
+          : 'Game designer and developer focused on spatial guidance, systemic feedback, and how one player choice can reveal an entire world.'}
+      </p>
+      <div class="dossier-actions">
+        <a class="button" href={`${base}/resume/yunhan-wei-resume-zh.pdf`} download aria-label={isZh ? '下载中文简历 PDF' : 'Download Chinese resume PDF'}>{isZh ? '下载中文简历' : 'Download Chinese résumé'}</a>
+        <a class="button secondary" href={`${base}/${locale}/journey/`}>{isZh ? '浏览项目旅程' : 'Explore the journey'}</a>
+      </div>
+    </div>
+    <aside class="identity-card" aria-label={isZh ? '档案索引' : 'Dossier index'}>
+      <span>{isZh ? '身份' : 'IDENTITY'}</span><strong>DESIGNER<br />DEVELOPER<br />LIBRARIAN</strong>
+      <dl><div><dt>{isZh ? '地点' : 'BASE'}</dt><dd>China</dd></div><div><dt>{isZh ? '语言' : 'LANG'}</dt><dd>ZH / EN</dd></div><div><dt>{isZh ? '状态' : 'STATUS'}</dt><dd>{isZh ? '可联系' : 'OPEN'}</dd></div></dl>
+    </aside>
+  </header>
+
+  <div class="dossier-grid">
+    <section class="dossier-section education" aria-labelledby="education-title">
+      <div class="section-number">01</div>
+      <div>
+        <p class="eyebrow">{isZh ? '学习档案' : 'ACADEMIC RECORD'}</p>
+        <h2 id="education-title" class="section-title">{isZh ? '教育背景' : 'Education'}</h2>
+        <ol class="record-list">
+          {portfolio.education.map((item, index) => (
+            <li>
+              <time>{month(item.start)} — {month(item.end)}</time>
+              <h3>{item.institution}</h3>
+              <p>{item.degree}</p>
+              {index === 0 && <small>{graduate}</small>}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section class="dossier-section experience" aria-labelledby="experience-title">
+      <div class="section-number">02</div>
+      <div>
+        <p class="eyebrow">{isZh ? '实践记录' : 'FIELD RECORD'}</p>
+        <h2 id="experience-title" class="section-title">{isZh ? '实习与实验室' : 'Experience'}</h2>
+        <ol class="record-list">
+          {portfolio.experience.map((item) => (
+            <li>
+              <time>{month(item.start)} — {month(item.end)}</time>
+              <h3>{item.organization}</h3>
+              <p class="record-role">{item.role}</p>
+              <p>{item.summary}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section class="dossier-section skills" aria-labelledby="skills-title">
+      <div class="section-number">03</div>
+      <div>
+        <p class="eyebrow">{isZh ? '工具索引' : 'TOOL INDEX'}</p>
+        <h2 id="skills-title" class="section-title">{isZh ? '技能与方法' : 'Skills & Methods'}</h2>
+        <div class="skill-groups">
+          <div><h3>{isZh ? '设计' : 'Design'}</h3><p>{isZh ? '关卡设计 · 系统设计 · 节奏与引导 · 原型验证 · 玩法文档' : 'Level design · Systems design · Pacing & guidance · Prototyping · Design documentation'}</p></div>
+          <div><h3>{isZh ? '开发' : 'Development'}</h3><p>{tools.join(' · ')}</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="dossier-section contact" aria-labelledby="contact-title">
+      <div class="section-number">04</div>
+      <div>
+        <p class="eyebrow">{isZh ? '公开联络卡' : 'PUBLIC CONTACT CARD'}</p>
+        <h2 id="contact-title" class="section-title">{isZh ? '联系我' : 'Contact'}</h2>
+        <address class="contact-list">
+          <a href={`mailto:${portfolio.profile.email}`}><span>Email</span><b>{portfolio.profile.email}</b></a>
+          <a href={`tel:${portfolio.profile.phone.replace(/\s/g, '')}`}><span>{isZh ? '电话' : 'Phone'}</span><b>{portfolio.profile.phone}</b></a>
+          <a href={portfolio.profile.github} target="_blank" rel="noreferrer"><span>GitHub</span><b>@tuitui0415</b></a>
+          <a href={portfolio.profile.website}><span>Website</span><b>tuitui0415.github.io</b></a>
+        </address>
+      </div>
+    </section>
+  </div>
+</article>
