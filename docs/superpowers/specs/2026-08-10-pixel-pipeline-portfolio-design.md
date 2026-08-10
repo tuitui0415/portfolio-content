@@ -1,268 +1,265 @@
-# Pixel Pipeline Portfolio Design
+# Pixel Library Portfolio Design
 
 ## 1. Goal and Release Boundary
 
-Build and publish a bilingual personal portfolio for Yunhan Wei at:
+Build and publish Yunhan Wei's bilingual portfolio at:
 
 `https://tuitui0415.github.io/portfolio-content/`
 
-The website presents all 15 projects as an explorable low-color pixel-art level. A visitor can select a project with the mouse and watch an original avatar travel to it, or move the avatar with the keyboard. Each checkpoint opens an independently shareable project dossier.
+The site presents Yunhan as a pixel-art librarian whose archive contains every verified project. It must be understandable as a professional portfolio before it is understood as a game. The public release includes the landing page, designer dossier, playable chronological library, 15 bilingual project dossiers, language persistence, resume download, responsive layouts, accessibility fallbacks, automated validation, and GitHub Pages delivery.
 
-This first release is an interaction-complete visual draft. It must establish the content model, navigation, movement, animation language, responsive behavior, accessibility, deployment, and resume workflow. A later art-polish release will refine sprite animation, environment tiles, depth, covers, transitions, and effects without changing the information architecture.
+The experience is original. It may borrow the density, lighting discipline, and animation confidence of cinematic pixel art, but it must not reproduce an existing game's characters, environments, UI, sounds, or level layouts.
 
-## 2. Audience and Experience Priority
+## 2. Audience and Experience Priorities
 
-The primary experience is an immersive project showcase rather than a conventional recruiter-first portfolio. It should feel like entering a small original game world while still allowing a visitor to reach any project, personal information, contact method, or resume without learning the controls.
+Primary visitors are game studios, recruiters, designers, and technical collaborators. The experience follows four priorities in order:
 
-The site must not copy Nintendo characters, Mario pipes, logos, sound effects, level layouts, or other protected game assets. “Pipe parkour” describes the interaction pattern only. All characters, pipes, palette, UI, routes, and motion language are original and based on field maps, level-design documentation, and low-color pixel art.
+1. A visitor can identify Yunhan, his discipline, and the two primary actions within five seconds.
+2. A visitor can reach About, Resume, Contact, or any project without playing the game.
+3. A visitor who chooses the journey receives a memorable, coherent interactive experience.
+4. Motion and visual richness never make the site slow, confusing, or inaccessible.
 
-## 3. Confirmed Visual Direction
+## 3. Confirmed Art Direction
 
-### 3.1 Style
+### 3.1 The Archive Explorer
 
-- Extreme low-color pixel art rather than detailed 16-bit or 32-bit illustration.
-- Four-color foundation: near-black, deep desaturated green, sage, and parchment.
-- Hard pixel edges, no smoothing, limited color ramps, stepped motion, scan-line texture, and compact monospace labels.
-- The earlier “Cartographer’s Archive” direction remains visible through coordinates, route annotations, checkpoint numbers, field-file terminology, and map-grid structure.
-- Real project images are used first and translated into the site palette with framing and pixel treatment.
-- Projects without usable imagery receive an original concept cover based only on verified project summaries. The dossier labels it “概念视觉 / Concept Visual”.
+Yunhan's on-site identity is an original librarian and archive explorer, not a generic hooded game character. The visual language uses detailed cinematic pixel art rather than oversized 8-bit blocks.
 
-### 3.2 Original Avatar
+- Character reference scale: approximately 64 × 96 source pixels for the journey and a higher-resolution portrait treatment on the landing page.
+- Clothing: dark green archive coat, warm brass accents, practical satchel or catalogue cards, and a contemporary silhouette.
+- Animation states: idle, walk, run, jump anticipation, airborne, landing, inspect book, and portal entry.
+- Motion uses stepped frame animation while camera and interface movement remain smooth.
+- Character proportions, outfit, face, and poses are original.
 
-Create an original low-color 2D pixel character representing a modern game designer:
+### 3.2 Pixel Library World
 
-- hoodie;
-- headphones;
-- handheld tablet;
-- neutral, professional silhouette;
-- no resemblance to an existing game character.
+The whole journey takes place inside an authored pixel-art library:
 
-V1 animation states:
+- deep forest green, aged paper, dark timber, brass, warm lamp light, and restrained red accents;
+- tall shelves, rolling ladders, reading tables, catalogue drawers, archive stamps, windows, dust motes, and layered silhouettes;
+- project portals appear as illuminated oversized archive books embedded in shelves;
+- year markers are engraved into the floor and shelf plaques;
+- category is shown through small shelf crests and accent colors, while chronology remains the primary spatial rule.
 
-- idle;
-- walk left and right;
-- move vertically on route segments;
-- interact/open project;
-- enter/exit a pipe or route transition.
+Text, navigation, and long-form content remain crisp HTML rather than rasterized pixel text. Pixel styling is reserved for imagery, borders, icons, transitions, and the interactive world.
 
-The final sprite must remain legible at its smallest desktop and mobile display size. The production asset may be generated from an image model, but frame dimensions, palette, transparency, and animation consistency must be verified before use.
+### 3.3 Image Policy
+
+Use verified project imagery before decorative imagery. Existing local screenshots, report pages, deck previews, and public project media are eligible. When no suitable real image exists, use an original code-authored pixel composition based only on verified project facts and label it `概念视觉 / Concept Visual`.
 
 ## 4. Information Architecture
 
 ### 4.1 Routes
 
-- `/`: detects browser language and redirects to the matching localized home route.
-- `/zh/` and `/en/`: interactive project world.
-- `/zh/projects/<project-id>/` and `/en/projects/<project-id>/`: static, shareable project dossiers.
-- `/zh/about/` and `/en/about/`: personal information pages.
-- Stable resume download URL under the published site.
+- `/`: use a tiny inline preference/locale resolver to redirect to the localized landing page, with visible Chinese and English fallback links.
+- `/zh/` and `/en/`: gateway landing page.
+- `/zh/about/` and `/en/about/`: independent designer dossier.
+- `/zh/journey/` and `/en/journey/`: playable chronological pixel library.
+- `/zh/projects/<project-id>/` and `/en/projects/<project-id>/`: static project dossiers.
+- `/resume/yunhan-wei-resume-zh.pdf`: stable resume download.
 
-Every route must work when opened directly on GitHub Pages, not only after navigating from the homepage.
+Every route is statically generated and must work when opened directly under the GitHub Pages base path `/portfolio-content/`.
 
-### 4.2 Navigation
+### 4.2 Global Navigation
 
-The upper-right area always provides:
+The upper-right navigation is always visible and contains:
 
-- project world;
-- about page;
-- resume download;
-- contact;
-- visible Chinese/English toggle.
+- Home;
+- Journey;
+- About;
+- Resume;
+- Contact;
+- Chinese/English toggle.
 
-The language system:
+The language system first reads the saved choice, otherwise uses Chinese for Chinese browser locales and English for all other locales. Manual selection is stored locally and moves to the equivalent localized route.
 
-1. reads a previously saved language choice from local storage;
-2. otherwise uses Chinese for Chinese browser locales;
-3. otherwise uses English;
-4. saves manual language changes;
-5. moves to the equivalent localized route when switching languages.
+## 5. Landing Page
 
-### 4.3 About Page
+The first viewport is a quiet archive entrance, not the game itself.
 
-The independent personal information page is an explorable pixel “designer profile file” containing:
+- A large animated librarian character is the visual focus.
+- Clicking or activating the character opens the About dossier.
+- The primary button reads `开始旅程 / BEGIN THE JOURNEY` and opens the journey.
+- A short bilingual identity line introduces Yunhan as a game designer and developer without repeating a dense resume summary.
+- The page includes subtle lamp glow, dust, foreground depth, and catalogue-card motion, all capped for performance and disabled in reduced-motion mode.
+- Global navigation and language switching are immediately visible.
 
-- name and positioning;
-- UC Davis MSCS, graduated June 11, 2026;
+The two actions are visually distinct: the character means “meet the designer,” and the button means “explore the work.”
+
+## 6. About: Designer Dossier
+
+The About route resembles an open archival case file and contains:
+
+- name and concise professional summary;
+- UC Davis MSCS, completed June 2026 and graduated June 11, 2026;
 - UC Santa Cruz B.S. in Computer Science: Computer Game Design;
-- all verified professional and research experience;
+- verified work, internship, and research experience;
 - skills and languages;
-- email, phone, and GitHub;
-- resume download.
+- email, public phone number, GitHub, and website;
+- resume preview and download action.
 
-It does not display age, gender, hometown, or availability.
+Age, gender, hometown, and availability remain resume-only and do not appear on the public About page. All contact links are selectable and keyboard accessible.
 
-## 5. Interactive Project World
+## 7. Journey: Chronological Library
 
-### 5.1 Pipe Route
+### 7.1 Spatial Structure
 
-All 15 projects appear as checkpoints on one horizontally explorable pipe route. Known dates determine chronological placement. Projects without verified dates appear in an explicitly labeled “Archive Annex / 日期待确认” route segment and are not assigned invented years.
+The journey is one horizontally scrollable library corridor containing all 15 projects. Every project now has a confirmed date, so no undated annex is needed.
 
-The pipe route uses:
+Projects are ordered from 2019 to 2026. Major year transitions create visually distinct library wings. Category plaques identify Game Design, Game Jam, Research, Technical, and UI/UX work without changing chronological order.
 
-- horizontal and vertical segments;
-- elbows, junctions, lifts, and short branches;
-- checkpoint flags and numbered project stations;
-- image panels above or below the route;
-- different elevations to express phases in the portfolio.
+Each project station includes:
 
-### 5.2 Movement
+- an illuminated archive-book portal;
+- localized title and date;
+- a compact role/type label;
+- a real image or labeled concept visual;
+- an arrival card with summary and explicit open action.
 
-Mouse or pointer:
+### 7.2 T3 Dual-Layer Timeline
 
-- clicking a project computes a route through the pipe graph;
-- the character travels to that checkpoint;
-- the camera follows with bounded easing;
-- arrival focuses the project and presents an open command;
-- a second click or the explicit open control enters the dossier.
+Chronology is expressed twice using the same project order:
+
+1. Year marks and project stations are physically embedded in the library floor and shelves.
+2. A collapsible catalogue timeline stays at the bottom of the viewport.
+
+The catalogue can be dragged horizontally, scrolled, or navigated with arrow keys. Selecting a project moves the librarian and camera to its station. Current year, current project, and exploration progress remain visible. The catalogue never covers project descriptions or mobile controls.
+
+### 7.3 Input and Movement
 
 Keyboard:
 
-- arrows and WASD move along valid route segments;
-- E opens the currently active checkpoint;
-- Escape closes overlays or returns focus to the world;
-- keyboard commands are ignored while typing or interacting with standard form controls.
+- A/D or Left/Right moves;
+- Space, W, or Up jumps;
+- E or Enter opens the active project;
+- Escape closes the arrival card or returns focus to the world.
+
+Mouse and trackpad:
+
+- clicking a project book or timeline node starts deterministic auto-travel;
+- clicking the world does not cause unintended page navigation;
+- arrival focuses the station and reveals the project card.
 
 Touch:
 
-- tapping a project triggers auto-travel;
-- compact on-screen directional controls allow manual movement;
-- touch controls do not cover project labels or navigation.
+- tap a station or timeline node to auto-travel;
+- coarse-pointer devices show compact left, right, jump, and open controls;
+- swiping the catalogue moves through the timeline without moving the browser page.
 
-Movement is constrained to a graph of authored pipe segments. It is not free platforming physics. This keeps input predictable, prevents collision bugs, and makes mouse path selection deterministic.
+The librarian uses lightweight authored side-scroller movement with a constant floor, a small number of decorative platform zones, bounded horizontal speed, and deterministic jump arcs. Jumping through the active glowing book portal opens the project dossier. E/Enter and the visible open button provide equivalent non-precision access.
 
-### 5.3 Project Selection and Dossier Transition
+Auto-travel follows the shortest horizontal direction and stops at the selected station. It does not simulate complex platform navigation. Reduced-motion mode focuses the chosen station immediately instead of running the avatar across the world.
 
-When a checkpoint opens:
+### 7.4 Return State
 
-1. the selected route segment brightens;
-2. map layers separate in stepped pixel motion;
-3. the project image expands;
-4. the localized dossier route loads;
-5. the page retains a clear return-to-world action and restores the prior world position.
+Opening a project saves the journey's active project and camera position in session storage. Returning to the journey restores that station. If storage is unavailable, the page starts at the first project.
 
-The transition must respect `prefers-reduced-motion`; reduced-motion mode uses a short opacity change with no camera travel.
+## 8. Project Dossiers
 
-## 6. Project Dossiers
+Each bilingual project page is generated from `content/projects/*.json` and the central external-link registry. It shows only supported facts:
 
-Each project page consumes its record from `content/projects/*.json` and the central link registry. It includes only sections supported by available data:
+- title, type, date, status, and personal role;
+- summary and project context;
+- design goals, mechanics, decisions, iteration, and limitations when present;
+- tools and team context;
+- real gallery media and labeled concept visuals;
+- verified GitHub, Drive, playable build, PDF, deck, Figma, or article links;
+- previous/next project navigation and a return-to-library action.
 
-- localized title and type;
-- date or explicit date status;
-- summary;
-- personal role and team context;
-- tools;
-- design goals;
-- mechanics;
-- decisions;
-- iteration and limitations;
-- resume-length bullets when useful;
-- real-image gallery and labeled concept covers;
-- GitHub, Google Drive, playable build, PDF, deck, article, Figma, or other verified external links;
-- previous/next project navigation.
+Team attribution remains explicit. Raymond Kang's model work and the NSFW team's metrics are not presented as Yunhan's individual model-training results. Hardware limitations and missing evidence remain visible rather than being invented.
 
-External links open safely in a new tab with descriptive labels. Raymond Kang’s repository and team contributions remain explicitly attributed. The NSFW system metric remains a team-level result. The drone physical-hardware limitation remains visible. No missing fact is invented.
+## 9. Technical Architecture
 
-## 7. Technical Architecture
+### 9.1 Stack
 
-### 7.1 Framework
+- Astro static site generation for localized, shareable routes.
+- TypeScript for content normalization, language routing, and journey logic.
+- A small native Canvas 2D module for the library renderer, avatar, camera, particles, and collision zones.
+- Semantic HTML overlays for navigation, timeline, station cards, fallback project list, and all long-form content.
+- CSS transitions and the View Transitions API where available, with normal navigation fallback.
 
-- Astro static site generation for direct, shareable routes and GitHub Pages compatibility.
-- TypeScript for build-time content normalization and interaction code.
-- A React island for the interactive home-world state.
-- PixiJS for the low-color 2D world, avatar, pipe tiles, checkpoints, camera, and sprite animation.
-- GSAP only for bounded DOM transitions and dossier/map-layer reveals that are awkward in PixiJS.
-- Astro view transitions for localized page navigation where supported, with normal navigation fallback.
+React, PixiJS, GSAP, a backend, authentication, and a database are intentionally excluded. The smaller runtime reduces bundle size, animation overhead, and long-term maintenance.
 
-### 7.2 Data Flow
+### 9.2 Module Boundaries
+
+- `content-loader`: validates and normalizes canonical JSON into bilingual view models.
+- `route-builder`: generates localized About and project routes.
+- `language-controller`: resolves, stores, and switches locale.
+- `journey-layout`: converts chronological projects into year wings, stations, and timeline positions.
+- `journey-engine`: owns player state, simple physics, auto-travel, camera, and active station.
+- `journey-renderer`: draws the pixel library from engine state without owning behavior.
+- `journey-ui`: owns DOM timeline, cards, touch controls, and accessible fallback list.
+
+The engine and renderer communicate through plain serializable state. Timeline and station UI use project IDs, never duplicated project copy.
+
+### 9.3 Data Flow
 
 `content/` remains the canonical source of truth.
 
 At build time:
 
-1. validate content with the existing Python validator;
-2. load profile, education, experience, project, and link JSON;
-3. normalize them into typed bilingual view models;
-4. generate localized project and about routes;
-5. build the checkpoint registry consumed by the interactive world;
-6. fail the build for missing project IDs, duplicate routes, or unresolved link references.
+1. run the existing Python content validator;
+2. load profile, education, experience, projects, and external links;
+3. normalize bilingual records and sort by confirmed project date;
+4. generate localized routes and journey station data;
+5. fail for missing IDs, duplicate routes, invalid dates, or unresolved link references.
 
-Website copy must not be maintained in a second hand-edited project database.
+The website does not maintain a second hand-edited project database.
 
-### 7.3 Movement Model
+## 10. Performance, Responsive Behavior, and Accessibility
 
-The world defines:
+- Landing and content routes render useful HTML without client JavaScript.
+- Journey JavaScript loads only on the journey route and targets at most 120 KB gzip for site-authored code.
+- Canvas device-pixel ratio is capped at 2 and animation pauses when hidden or offscreen.
+- The journey targets smooth 60 fps on current desktop and mobile devices and degrades decorative particles before movement quality.
+- Images use responsive dimensions, lazy loading, and optimized modern formats with fallbacks.
+- Mobile rearranges the arrival card and catalogue vertically and enlarges touch targets to at least 44 CSS pixels.
+- Every canvas action has a DOM control or project-list equivalent.
+- Focus order, focus visibility, headings, link names, and color contrast are explicitly tested.
+- `prefers-reduced-motion` disables parallax, particles, auto-running, camera easing, and elaborate transitions.
+- Canvas initialization failure reveals the complete chronological DOM project list without blocking navigation.
+- External links open safely with descriptive labels.
 
-- graph nodes with `id`, coordinates, and optional checkpoint project ID;
-- graph edges with endpoints, orientation, and distance;
-- player state with current node/edge, direction, progress, and movement mode;
-- camera state with bounded world position;
-- selection state with active and pending project IDs.
+## 11. Error and Fallback Behavior
 
-Mouse auto-travel uses a deterministic shortest-path search over this small authored graph. Keyboard input chooses a connected edge in the requested direction. The same route data draws the pipes and constrains movement, preventing the visual route and playable route from drifting apart.
+- Missing local media uses a labeled concept visual.
+- Failed external media never removes the project summary or links.
+- Local-storage or session-storage failure falls back to browser language and the first journey station.
+- Unsupported View Transitions use standard page navigation.
+- Canvas or WebGL capability is not required; the renderer uses Canvas 2D and a semantic HTML fallback.
+- JavaScript-disabled visitors can browse About, Resume, the project list, and every project dossier.
 
-## 8. Performance and Accessibility
+## 12. Resume Workflow
 
-- Static HTML contains a complete project index even before the interactive world loads.
-- The PixiJS bundle loads only on the homepage.
-- Project images use responsive sizes and lazy loading.
-- Concept covers use optimized WebP plus fallback where needed.
-- Fonts are self-hosted or use reliable system fallbacks.
-- All navigation and project selection remain keyboard accessible outside the canvas.
-- A “project list” control provides immediate non-game navigation.
-- Reduced-motion mode disables auto-running, parallax, scan-line motion, route pulses, and elaborate transitions.
-- Color contrast is verified despite the restricted palette.
-- Pixel graphics use nearest-neighbor scaling.
-- Mobile has touch controls and a simpler camera, without removing projects or content.
+The verified one-page Chinese resume is published at a stable URL and contains the confirmed website, education, experience, and project dates. Future replacements keep the same public filename so existing applications and links do not break.
 
-## 9. Resume Workflow
+## 13. Testing and Delivery
 
-The supplied one-page Chinese resume is the current source file for the download experience. After the public website URL exists, create an updated one-page PDF that:
+Automated checks cover:
 
-- replaces the Google Sites URL with `https://tuitui0415.github.io/portfolio-content/`;
-- changes UC Davis from “现在” to a completed June 2026 degree;
-- states graduation on June 11, 2026 where layout permits;
-- preserves the public phone number;
-- uses the canonical repository facts for other corrections;
-- remains one page and visually verified.
+- existing Python content validation and repository tests;
+- bilingual view-model normalization and chronological sorting;
+- language detection and persistence;
+- route generation under the `/portfolio-content/` base path;
+- journey movement, jump bounds, station activation, and auto-travel;
+- direct access to both languages, About, several project pages, and the resume;
+- keyboard-only and reduced-motion journeys;
+- representative desktop, tablet, and mobile viewport layouts.
 
-Publish the updated PDF under a stable site filename so future replacements do not break links.
+GitHub Actions validates content, builds the Astro site, uploads the Pages artifact, and deploys `main`. The existing public URL remains unchanged.
 
-## 10. GitHub Pages Delivery
+## 14. Acceptance Criteria
 
-- Add a GitHub Actions workflow that validates content, builds the Astro site with base path `/portfolio-content/`, uploads the Pages artifact, and deploys it.
-- Configure asset and internal URLs for the project-site base path.
-- Do not require a backend, database, authentication, or secret runtime values.
-- Verify the deployed homepage, both languages, about pages, multiple direct project URLs, resume download, external links, keyboard movement, pointer auto-travel, and mobile layout.
+The release is complete when:
 
-## 11. V1 Acceptance Criteria
-
-The draft release is ready for art polish when:
-
-- all 15 projects are reachable from the world and the fallback list;
-- mouse selection moves the avatar to the selected project;
-- arrows and WASD move the avatar along valid routes;
-- E opens the active project;
-- every project has a localized, shareable static route;
-- browser language detection and the visible language toggle work and persist;
-- the about page contains only the approved professional information;
-- verified external links are surfaced on their related projects;
-- real images are preferred and concept images are labeled;
-- the supplied resume is updated and downloadable from a stable URL;
-- GitHub Pages serves the site at the confirmed address;
-- content validation, build tests, interaction tests, and responsive checks pass.
-
-## 12. Deferred Art-Polish Phase
-
-After the V1 interaction draft is published, a separate review will cover:
-
-- final avatar silhouette and sprite-sheet cleanup;
-- per-project environment props;
-- more distinctive pipe tiles and junctions;
-- real-image crop direction;
-- concept-cover art direction;
-- background depth and atmosphere;
-- sound design, only if separately approved;
-- richer arrival and project-opening animations;
-- final typography and spacing adjustments.
-
-These refinements must preserve the stable routes, data contract, controls, accessibility alternatives, and GitHub Pages deployment established in V1.
+- the landing page clearly exposes About and Begin the Journey;
+- the original librarian character and pixel library art direction are visually coherent;
+- all 15 projects appear in chronological order in both the world and catalogue timeline;
+- keyboard, mouse, touch, and visible fallback navigation reach every project;
+- jumping into a selected archive book, pressing E/Enter, or using the open button reaches the same dossier;
+- every project and About page is bilingual, static, shareable, and direct-load safe;
+- language detection, visible switching, and preference persistence work;
+- the resume downloads from its stable URL;
+- motion respects reduced-motion settings;
+- content, unit, interaction, accessibility, responsive, performance, and production-build checks pass;
+- the verified build is published at `https://tuitui0415.github.io/portfolio-content/`.
