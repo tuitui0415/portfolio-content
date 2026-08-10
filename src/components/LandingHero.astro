@@ -1,0 +1,50 @@
+---
+import type { Locale, LocalizedPortfolio } from '../lib/content/types';
+import { ui } from '../lib/i18n/copy';
+
+interface Props { locale: Locale; portfolio: LocalizedPortfolio }
+const { locale, portfolio } = Astro.props;
+const copy = ui[locale];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const route = (path: string) => `${base}/${locale}/${path}`;
+const intro = locale === 'zh'
+  ? '我以关卡、系统与交互为线索，把复杂规则整理成可探索、可理解、可记住的体验。'
+  : 'I shape levels, systems, and interaction into experiences that are explorable, legible, and memorable.';
+---
+
+<section class="landing-hero" aria-labelledby="landing-title">
+  <div class="landing-atmosphere" aria-hidden="true">
+    {Array.from({ length: 14 }, (_, index) => <i style={`--i:${index}`} />)}
+  </div>
+
+  <div class="landing-copy">
+    <p class="eyebrow">{locale === 'zh' ? '馆藏编号 0415 · 游戏设计师档案' : 'ARCHIVE 0415 · GAME DESIGNER DOSSIER'}</p>
+    <h1 id="landing-title" class="display-title">
+      <span>{portfolio.profile.name}</span>
+      <em>{locale === 'zh' ? '项目图书馆' : 'The Project Library'}</em>
+    </h1>
+    <p class="landing-intro">{intro}</p>
+    <div class="landing-actions">
+      <a class="button" href={route('journey/')}>{copy.begin}<span aria-hidden="true"> →</span></a>
+      <a class="button secondary" href={route('about/')}>{locale === 'zh' ? '阅读个人档案' : 'Read the dossier'}</a>
+    </div>
+    <dl class="landing-index" aria-label={locale === 'zh' ? '作品集摘要' : 'Portfolio summary'}>
+      <div><dt>15</dt><dd>{locale === 'zh' ? '项目档案' : 'Project files'}</dd></div>
+      <div><dt>2019—26</dt><dd>{locale === 'zh' ? '创作时间轴' : 'Creative timeline'}</dd></div>
+      <div><dt>02</dt><dd>{locale === 'zh' ? '语言版本' : 'Languages'}</dd></div>
+    </dl>
+  </div>
+
+  <div class="librarian-stage">
+    <div class="archive-window" aria-hidden="true"></div>
+    <a class="librarian-link" href={route('about/')} aria-label={copy.dossier}>
+      <img src={`${base}/art/librarian-hero.webp`} width="800" height="1200" alt="" fetchpriority="high" />
+      <span class="portrait-prompt"><b>01</b>{copy.dossier}<i aria-hidden="true">↗</i></span>
+    </a>
+    <div class="catalogue-tab" aria-hidden="true">
+      <span>{locale === 'zh' ? '在馆' : 'ON SITE'}</span><b>Y.W.</b><small>DESIGN / CODE / SYSTEMS</small>
+    </div>
+  </div>
+
+  <p class="landing-scroll" aria-hidden="true"><span></span>{locale === 'zh' ? '进入馆藏' : 'ENTER THE ARCHIVE'}</p>
+</section>

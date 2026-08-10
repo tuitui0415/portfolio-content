@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LandingHero from '../../components/LandingHero.astro';
+import { loadPortfolio, localizePortfolio } from '../../lib/content/load';
+import type { Locale } from '../../lib/content/types';
+import '../../styles/landing.css';
+
+export function getStaticPaths() {
+  return (['zh', 'en'] as Locale[]).map((lang) => ({ params: { lang } }));
+}
+
+const locale = Astro.params.lang as Locale;
+const portfolio = localizePortfolio(loadPortfolio(), locale);
+const description = locale === 'zh'
+  ? '魏允瀚的双语游戏设计作品集：关卡、系统、交互与开发。'
+  : 'Yunhan Wei’s bilingual portfolio across level design, systems, interaction, and development.';
+---
+
+<BaseLayout locale={locale} title={`${portfolio.profile.name} · Portfolio`} description={description} bodyClass="landing-page">
+  <LandingHero locale={locale} portfolio={portfolio} />
+</BaseLayout>

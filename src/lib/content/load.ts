@@ -1,5 +1,4 @@
 import { readdirSync, readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 import type {
   ExternalLinkRecord,
@@ -10,7 +9,7 @@ import type {
   ProjectViewModel,
 } from './types';
 
-const ROOT = fileURLToPath(new URL('../../../', import.meta.url));
+const ROOT = process.cwd();
 const CONTENT = join(ROOT, 'content');
 
 function readJson<T>(path: string): T {
