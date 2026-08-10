@@ -1,0 +1,35 @@
+---
+import type { Locale } from '../lib/content/types';
+import { ui } from '../lib/i18n/copy';
+import GlobalHeader from '../components/GlobalHeader.astro';
+import '../styles/global.css';
+
+interface Props { locale: Locale; title: string; description: string; bodyClass?: string }
+const { locale, title, description, bodyClass = '' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<!doctype html>
+<html lang={locale === 'zh' ? 'zh-CN' : 'en'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111b18" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
+    <title>{title}</title>
+  </head>
+  <body class={bodyClass}>
+    <a class="skip-link" href="#main">{ui[locale].skip}</a>
+    <GlobalHeader locale={locale} currentPath={Astro.url.pathname} />
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <span>© 2026 Yunhan Wei</span>
+      <span>{locale === 'zh' ? '游戏设计 · 系统设计 · 开发' : 'Game Design · Systems · Development'}</span>
+    </footer>
+    <script>
+      import '../scripts/language';
+    </script>
+  </body>
+</html>

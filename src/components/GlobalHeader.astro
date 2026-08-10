@@ -1,0 +1,29 @@
+---
+import type { Locale } from '../lib/content/types';
+import { ui } from '../lib/i18n/copy';
+import { switchLocalePath } from '../lib/i18n/locale';
+
+interface Props { locale: Locale; currentPath: string }
+const { locale, currentPath } = Astro.props;
+const copy = ui[locale];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const route = (path = '') => `${base}/${locale}/${path}`.replace(/([^:]\/)\/+/, '$1');
+const other: Locale = locale === 'zh' ? 'en' : 'zh';
+const languagePath = switchLocalePath(currentPath, other, base);
+---
+
+<header class="site-header">
+  <a class="brand" href={route()} aria-label={`${copy.home} · Yunhan Wei`}>
+    <span class="brand-mark" aria-hidden="true">YW</span>
+    <span class="brand-name">YUNHAN WEI</span>
+  </a>
+  <nav class="site-nav" aria-label={locale === 'zh' ? '主导航' : 'Primary navigation'}>
+    <a href={route('journey/')}>{copy.journey}</a>
+    <a href={route('about/')}>{copy.about}</a>
+    <a href={`${base}/resume/yunhan-wei-resume-zh.pdf`}>{copy.resume}</a>
+    <a href={route('about/#contact')}>{copy.contact}</a>
+  </nav>
+  <a class="language-switch" href={languagePath} data-language-switch={other} aria-label={locale === 'zh' ? 'Switch to English' : '切换至中文'}>
+    {copy.language}
+  </a>
+</header>
