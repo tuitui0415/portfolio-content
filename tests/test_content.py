@@ -97,6 +97,14 @@ class RepositoryCompletenessTests(unittest.TestCase):
         expected = {"rhythm-watershed", "modular-mining-game", "ue5-adaptive-music-system"}
         self.assertTrue(expected.issubset(load_project_ids(ROOT)))
 
+    def test_new_report_and_level_design_projects_are_imported(self):
+        expected = {
+            "multiplayer-xr-drone-game",
+            "interpretable-nsfw-text-moderation",
+            "mont-saint-michel-castle",
+        }
+        self.assertTrue(expected.issubset(load_project_ids(ROOT)))
+
 
 class ProjectDocumentationTests(unittest.TestCase):
     def test_every_project_has_a_human_readable_page(self):
