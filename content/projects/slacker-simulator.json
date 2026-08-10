@@ -3,7 +3,7 @@
   "title": {"zh": "Slacker Simulator", "en": "Slacker Simulator"},
   "type": "team-project",
   "status": "source-unavailable",
-  "dates": {"start": "", "end": ""},
+  "dates": {"start": "2021-09", "end": "2021-12", "context": {"zh": "本科大三秋季学季，月份依据 UCSC 校历范围换算", "en": "Junior-year fall quarter; months inferred from the UCSC academic calendar"}},
   "team": {"size": null, "context": {"zh": "现有网站未说明", "en": "Not stated on the legacy portfolio"}},
   "roles": {"zh": ["程序开发", "游戏设计"], "en": ["Programming", "Game Design"]},
   "tools": [],
@@ -12,5 +12,5 @@
   "copy": {"resume": {"zh": [], "en": []}, "website": {"zh": "", "en": ""}, "full": {"zh": "", "en": ""}},
   "link_ids": ["slacker-simulator-drive"],
   "sources": ["Legacy portfolio", "Unavailable Google Drive link", "Owner access confirmation"],
-  "questions": ["项目内容、日期、团队、引擎和玩法是什么？", "你具体负责哪些程序与设计工作？", "是否还有本地备份、截图、视频或其他可访问的项目资料？"]
+  "questions": ["项目内容、团队、引擎和玩法是什么？", "你具体负责哪些程序与设计工作？", "是否还有本地备份、截图、视频或其他可访问的项目资料？"]
 }

@@ -7,9 +7,11 @@
   "type": "academic-team-project",
   "status": "completed-prototype",
   "dates": {
+    "start": "2025-09",
+    "end": "2025-12",
     "context": {
-      "zh": "报告未标注明确日期，待确认",
-      "en": "The report does not state an explicit date; confirmation pending"
+      "zh": "硕士二年级秋季学季，月份依据 UC Davis 校历范围换算",
+      "en": "Second-year master's fall quarter; months inferred from the UC Davis academic calendar"
     }
   },
   "team": {

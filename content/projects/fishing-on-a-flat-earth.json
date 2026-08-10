@@ -3,7 +3,7 @@
   "title": {"zh": "Fishing on a Flat Earth", "en": "Fishing on a Flat Earth"},
   "type": "game-jam",
   "status": "in-development",
-  "dates": {"start": "", "end": ""},
+  "dates": {"start": "2021-04", "end": "2021-06", "context": {"zh": "本科大二春季学季，月份依据 UCSC 校历范围换算", "en": "Sophomore-year spring quarter; months inferred from the UCSC academic calendar"}},
   "team": {"size": 7, "context": {"zh": "Game Jam 团队项目", "en": "Seven-person Game Jam team"}},
   "roles": {"zh": ["3D 建模"], "en": ["3D Modeling"]},
   "tools": [],
@@ -12,5 +12,5 @@
   "copy": {"resume": {"zh": [], "en": []}, "website": {"zh": "作为七人团队的 3D 建模成员，参与制作一款轻松的开放世界钓鱼原型。", "en": "Contributed 3D modeling to a seven-person team's relaxing open-world fishing prototype."}, "full": {"zh": "", "en": ""}},
   "link_ids": ["fishing-flat-earth-itch"],
   "sources": ["itch.io description and credits", "Legacy portfolio"],
-  "questions": ["项目的准确开发日期和 Game Jam 名称是什么？", "你具体制作了哪些 3D 模型或场景资产？", "使用了哪些引擎和建模工具？"]
+  "questions": ["Game Jam 的名称是什么？", "你具体制作了哪些 3D 模型或场景资产？", "使用了哪些引擎和建模工具？"]
 }
