@@ -1,0 +1,66 @@
+{
+  "id": "interpretable-nsfw-text-moderation",
+  "title": {
+    "zh": "可解释的 NSFW 文本审核",
+    "en": "Interpretable NSFW Text Moderation"
+  },
+  "type": "academic-team-project",
+  "status": "completed-prototype",
+  "dates": {
+    "context": {
+      "zh": "报告未标注明确日期，待确认",
+      "en": "The report does not state an explicit date; confirmation pending"
+    }
+  },
+  "team": {
+    "size": 2,
+    "context": {
+      "zh": "Raymond Kang 与魏允瀚合作；个人贡献边界依据报告作者分工记录",
+      "en": "Collaboration between Raymond Kang and Yunhan Wei; individual scope follows the report's author-contribution statement"
+    }
+  },
+  "roles": {
+    "zh": ["可视化与用户体验", "仪表板设计", "前端实现", "可用性研究工具设计"],
+    "en": ["Visualization and UX", "Dashboard Design", "Front-End Implementation", "Usability Study Instruments"]
+  },
+  "tools": ["RoBERTa", "RISE", "Post-hoc Concept Bottleneck Model", "Streamlit", "Python"],
+  "summary": {
+    "zh": "团队构建了结合 RoBERTa、RISE 与后验概念瓶颈模型的可解释文本审核系统；魏允瀚负责可视化与用户体验、仪表板设计、可用性研究工具及前端实现。",
+    "en": "The team built an interpretable text-moderation system combining RoBERTa, RISE, and a post-hoc concept bottleneck model; Yunhan Wei owned visualization and UX, dashboard design, usability-study instruments, and front-end implementation."
+  },
+  "design": {
+    "goals": {
+      "zh": ["把模型判断转化为审核人员可读的多层解释", "在一个界面中同时呈现词元、概念和分类结果"],
+      "en": ["Translate model decisions into layered explanations that moderators can inspect", "Present token-, concept-, and classification-level evidence in one interface"]
+    },
+    "mechanics": {
+      "zh": ["词元显著性热图", "概念激活条形图", "词元—概念矩阵", "NSFW 分类结果"],
+      "en": ["Token-saliency heatmap", "Concept-activation bar chart", "Token–concept matrix", "NSFW classification result"]
+    },
+    "decisions": {
+      "zh": ["使用互补视图区分局部词元证据与高层概念解释", "将三类解释集中在 Streamlit 仪表板中，支持并排理解"],
+      "en": ["Use complementary views to separate local token evidence from higher-level concept explanations", "Unify three explanation views in a Streamlit dashboard for side-by-side interpretation"]
+    },
+    "iteration": {
+      "zh": ["报告记录了分词器特殊符号和前导空格标记对可读性的影响", "识别出“sexual content”概念样本不均衡；由于时间限制，可用性研究尚未执行"],
+      "en": ["The report documents readability issues from tokenizer special tokens and leading-space markers", "Identified imbalance in the sexual-content concept; the usability study was not run because of time constraints"]
+    }
+  },
+  "copy": {
+    "resume": {
+      "zh": ["负责可解释 NSFW 文本审核系统的可视化与 UX、Streamlit 仪表板设计及前端实现，整合词元显著性热图、概念激活条形图与词元—概念矩阵。", "设计可用性研究工具，并梳理分词器符号、概念样本不均衡等解释可读性问题；模型训练与 0.8705 验证准确率为团队系统成果。"],
+      "en": ["Owned visualization and UX, Streamlit dashboard design, and front-end implementation for an interpretable NSFW text-moderation system, integrating token saliency, concept activations, and a token–concept matrix.", "Designed usability-study instruments and documented explanation-readability issues such as tokenizer artifacts and concept imbalance; model training and 0.8705 validation accuracy were team-level system results."]
+    },
+    "website": {
+      "zh": "该团队项目使用 RoBERTa、RISE 与后验概念瓶颈模型解释 NSFW 文本分类。魏允瀚负责将模型输出整理为可用界面：通过词元显著性、概念激活和词元—概念关系三个互补视图，帮助用户理解分类依据。",
+      "en": "This team project explains NSFW text classification with RoBERTa, RISE, and a post-hoc concept bottleneck model. Yunhan Wei turned model outputs into a usable interface with three complementary views: token saliency, concept activation, and token–concept relationships."
+    },
+    "full": {
+      "zh": "系统将基础分类器的局部特征归因与高层概念解释组合在同一 Streamlit 仪表板中。魏允瀚负责可视化与用户体验、仪表板设计、可用性研究工具及前端实现；Raymond Kang 负责基础模型微调、RISE 适配、概念头训练、数据集、指标和研究执行。报告中的 0.8705 验证准确率属于团队系统成果，不归因于任何单一成员。",
+      "en": "The system combines local feature attribution from the base classifier with higher-level concept explanations in one Streamlit dashboard. Yunhan Wei was responsible for visualization and UX, dashboard design, usability-study instruments, and front-end implementation; Raymond Kang handled base-model fine-tuning, RISE adaptation, concept-head training, datasets, metrics, and study execution. The reported 0.8705 validation accuracy is a team-level system result, not an individual claim."
+    }
+  },
+  "link_ids": ["nsfw-moderation-repository"],
+  "sources": ["Owner-provided project report", "Raymond Kang's public project repository and branch"],
+  "questions": ["项目完成日期是什么？", "是否有可公开的仪表板在线演示或截图？"]
+}

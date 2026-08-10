@@ -255,5 +255,19 @@
     "checked_at": "2026-08-10",
     "evidence": "Anonymous access verified; Google Drive video",
     "action": "keep"
+  },
+  {
+    "id": "nsfw-moderation-repository",
+    "label": {
+      "zh": "可解释 NSFW 文本审核团队代码",
+      "en": "Interpretable NSFW Text Moderation Team Code"
+    },
+    "url": "https://github.com/RaymondHKang/ECS289HFinalProject/tree/raymondbranch",
+    "project_id": "interpretable-nsfw-text-moderation",
+    "type": "source-code",
+    "access": "public",
+    "checked_at": "2026-08-10",
+    "evidence": "Public GitHub repository and branch verified",
+    "action": "keep"
   }
 ]
