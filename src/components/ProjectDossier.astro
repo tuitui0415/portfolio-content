@@ -21,7 +21,6 @@ const sections = [
   { key: 'goals', number: '01', title: isZh ? '设计目标' : 'Design Goals', items: project.design.goals },
   { key: 'mechanics', number: '02', title: isZh ? '核心机制' : 'Core Mechanics', items: project.design.mechanics },
   { key: 'decisions', number: '03', title: isZh ? '关键决策' : 'Key Decisions', items: project.design.decisions },
-  { key: 'iteration', number: '04', title: isZh ? '迭代与验证' : 'Iteration & Validation', items: project.design.iteration },
 ];
 ---
 
@@ -32,14 +31,14 @@ const sections = [
 
   <header class="project-hero" style={`--project-accent:${media.accent}`}>
     <div class="project-heading">
-      <p class="eyebrow">{type} · {project.status.replaceAll('-', ' ')}</p>
+      <p class="eyebrow">{type}</p>
       <h1 class="display-title">{project.title}</h1>
       {project.titleAlt !== project.title && <p class="project-alt-title">{project.titleAlt}</p>}
       <p class="project-summary">{project.websiteCopy || project.summary}</p>
       <dl class="project-meta">
         <div><dt>{isZh ? '时间' : 'Date'}</dt><dd>{date}</dd></div>
         <div><dt>{isZh ? '职责' : 'Role'}</dt><dd>{project.roles.join(' · ')}</dd></div>
-        <div><dt>{isZh ? '团队' : 'Team'}</dt><dd>{project.teamContext}</dd></div>
+        {project.teamSize > 0 && <div><dt>{isZh ? '团队' : 'Team'}</dt><dd>{project.teamContext}</dd></div>}
       </dl>
       {project.links.length > 0 && <div class="project-links">
         {project.links.map((link) => <a class="button" href={link.url} target="_blank" rel="noreferrer">{link.label}<span aria-hidden="true"> ↗</span></a>)}
@@ -54,7 +53,7 @@ const sections = [
 
   <section class="project-overview">
     <p class="eyebrow">{isZh ? '档案摘要' : 'ARCHIVE ABSTRACT'}</p>
-    <p>{project.fullCopy || project.summary}</p>
+    <p>{project.websiteCopy || project.summary}</p>
     <div class="tool-strip" aria-label={isZh ? '工具' : 'Tools'}>{project.tools.map((tool) => <span>{tool}</span>)}</div>
   </section>
 

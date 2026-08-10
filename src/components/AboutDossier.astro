@@ -24,8 +24,8 @@ const tools = [...new Set(portfolio.projects.flatMap((project) => project.tools)
       <h1 class="display-title">{portfolio.profile.name}</h1>
       <p class="dossier-lede">
         {isZh
-          ? '游戏设计师与开发者。关注空间引导、系统反馈，以及玩家如何从一次选择中读懂整个世界。'
-          : 'Game designer and developer focused on spatial guidance, systemic feedback, and how one player choice can reveal an entire world.'}
+          ? '计算机科学硕士，拥有游戏设计、Unity / Unreal / Godot 开发、XR 与图形开发项目经历。'
+          : 'M.S. in Computer Science with project experience in game design, Unity / Unreal / Godot development, XR, and graphics development.'}
       </p>
       <div class="dossier-actions">
         <a class="button" href={`${base}/resume/yunhan-wei-resume-zh.pdf`} download aria-label={isZh ? '下载中文简历 PDF' : 'Download Chinese resume PDF'}>{isZh ? '下载中文简历' : 'Download Chinese résumé'}</a>

@@ -7,7 +7,7 @@
   "team": {"size": null, "context": {"zh": "现有网站未说明", "en": "Not stated on the legacy portfolio"}},
   "roles": {"zh": ["程序开发"], "en": ["Programming"]},
   "tools": ["Ink"],
-  "summary": {"zh": "使用 Ink 制作的网页互动叙事项目，现有页面可运行但标题仍为 RandomOrderTemplate，缺少项目背景说明。", "en": "A web-based Ink interactive-fiction project that runs publicly but still uses the title RandomOrderTemplate and lacks project context."},
+  "summary": {"zh": "本科大一春季使用 Ink 制作的网页互动叙事项目，包含分支叙事、存档与读档功能。", "en": "A web-based Ink interactive-fiction project completed during the first undergraduate spring quarter, with branching narrative and save/load functionality."},
   "design": {"goals": {"zh": [], "en": []}, "mechanics": {"zh": ["分支叙事", "存档与读档"], "en": ["Branching narrative", "Save and load"]}, "decisions": {"zh": [], "en": []}, "iteration": {"zh": [], "en": []}},
   "copy": {"resume": {"zh": [], "en": []}, "website": {"zh": "", "en": ""}, "full": {"zh": "", "en": ""}},
   "link_ids": ["psychotherapy-playable-page"],

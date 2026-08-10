@@ -11,10 +11,9 @@ test('the authored journey bundle stays below 120 KB gzip', () => {
   expect(bytes).toBeLessThanOrEqual(120 * 1024);
 });
 
-test('hero image is compact and dimensioned', async ({ page }) => {
+test('landing avoids a decorative hero image request', async ({ page }) => {
   await page.goto('/portfolio-content/en/');
-  const hero = page.locator('.librarian-link img');
-  await expect(hero).toHaveAttribute('width', '800');
+  await expect(page.locator('main img')).toHaveCount(0);
   const resource = await page.evaluate(() => performance.getEntriesByType('resource').find((entry) => entry.name.includes('librarian-hero'))?.name);
-  expect(resource).toContain('librarian-hero.webp');
+  expect(resource).toBeUndefined();
 });

@@ -7,7 +7,7 @@
   "team": {"size": null, "context": {"zh": "现有网站未说明", "en": "Not stated on the legacy portfolio"}},
   "roles": {"zh": ["程序开发", "游戏设计"], "en": ["Programming", "Game Design"]},
   "tools": [],
-  "summary": {"zh": "现有个人网站列出的程序与设计项目；原 Google Drive 文件目前连项目本人也无法访问，因此不作为当前公开展示素材。", "en": "A programming and design project from the legacy portfolio. Its original Google Drive file is no longer accessible even to the owner, so it is not used as a current public portfolio asset."},
+  "summary": {"zh": "本科大三秋季完成的程序开发与游戏设计团队项目。", "en": "A team programming and game design project completed during the fall quarter of the third undergraduate year."},
   "design": {"goals": {"zh": [], "en": []}, "mechanics": {"zh": [], "en": []}, "decisions": {"zh": [], "en": []}, "iteration": {"zh": [], "en": []}},
   "copy": {"resume": {"zh": [], "en": []}, "website": {"zh": "", "en": ""}, "full": {"zh": "", "en": ""}},
   "link_ids": ["slacker-simulator-drive"],
