@@ -1,0 +1,68 @@
+---
+import type { Locale, LocalizedPortfolio } from '../lib/content/types';
+import { projectTypeLabels, ui } from '../lib/i18n/copy';
+import { buildJourneyLayout } from '../lib/journey/layout';
+
+interface Props { locale: Locale; portfolio: LocalizedPortfolio }
+const { locale, portfolio } = Astro.props;
+const isZh = locale === 'zh';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const layout = buildJourneyLayout(portfolio.projects);
+const first = portfolio.projects[0];
+const payload = JSON.stringify({ locale, base, layout }).replaceAll('<', '\\u003c');
+const years = new Set<number>();
+---
+
+<section class="journey-shell" data-journey-root data-player-x={layout.stations[0].x} aria-labelledby="journey-title">
+  <header class="journey-heading">
+    <div><p class="eyebrow">{isZh ? '可探索项目时间轴 · 2019—2026' : 'PLAYABLE PROJECT TIMELINE · 2019—2026'}</p><h1 id="journey-title">{isZh ? '穿过我的项目图书馆' : 'Walk through my project library'}</h1></div>
+    <p>{isZh ? '选择时间轴上的项目，小人会自动前往；也可直接使用键盘或屏幕控制。' : 'Choose a project and the librarian will travel there—or explore freely with keyboard and on-screen controls.'}</p>
+  </header>
+
+  <div class="journey-stage">
+    <canvas aria-label={isZh ? '可操控的像素图书馆，按时间排列 15 个项目' : 'Playable pixel library containing 15 chronological projects'}></canvas>
+    <div class="journey-hud">
+      <p class="journey-controls-copy">{ui[locale].controls}</p>
+      <p class="sr-only" aria-live="polite" data-journey-status></p>
+      <article class="arrival-card" aria-live="polite">
+        <div><span data-active-date>{first.dates.start.replace('-', '.')}</span><small>{isZh ? '当前档案' : 'ACTIVE FILE'}</small></div>
+        <h2 data-active-title>{first.title}</h2>
+        <p data-active-summary>{first.websiteCopy || first.summary}</p>
+        <a class="button" data-active-link href={`${base}/${locale}/projects/${first.id}/`}>{ui[locale].openProject} <span aria-hidden="true">↗</span></a>
+      </article>
+    </div>
+    <div class="touch-controls" aria-label={isZh ? '移动控制' : 'Movement controls'}>
+      <div><button type="button" data-control="left" aria-label={isZh ? '向左移动' : 'Move left'}>←</button><button type="button" data-control="right" aria-label={isZh ? '向右移动' : 'Move right'}>→</button></div>
+      <div><button type="button" data-control="jump" aria-label={isZh ? '跳跃并进入项目' : 'Jump into project'}>↑</button><button type="button" data-control="open" aria-label={isZh ? '打开当前项目' : 'Open current project'}>E</button></div>
+    </div>
+  </div>
+
+  <nav class="catalogue-timeline" aria-label={isZh ? '项目时间轴' : 'Project timeline'}>
+    <div class="catalogue-track">
+      {layout.stations.map((station) => {
+        const year = Number(station.date.slice(0, 4));
+        const showYear = !years.has(year); years.add(year);
+        return <div class="catalogue-entry" style={`--accent:${station.accent}`}>
+          {showYear && <span class="catalogue-year">{year}</span>}
+          <button type="button" data-project-id={station.projectId} aria-current={station === layout.stations[0] ? 'true' : undefined}>
+            <i aria-hidden="true"></i><small>{station.date.replace('-', '.')}</small><b>{station.title}</b>
+          </button>
+        </div>;
+      })}
+    </div>
+  </nav>
+
+  <details class="journey-fallback" open>
+    <summary>{isZh ? '全部项目档案（按时间）' : 'All project files (chronological)'}</summary>
+    <ol>{portfolio.projects.map((project) => <li><time>{project.dates.start.replace('-', '.')}</time><a href={`${base}/${locale}/projects/${project.id}/`}>{project.title}</a><span>{projectTypeLabels[locale][project.type] ?? project.type}</span></li>)}</ol>
+  </details>
+  <script is:inline type="application/json" data-journey-payload set:html={payload}></script>
+</section>
+
+<script>
+  import { mountJourney } from '../lib/journey/ui';
+  document.querySelectorAll<HTMLElement>('[data-journey-root]').forEach((root) => {
+    const source = root.querySelector<HTMLScriptElement>('[data-journey-payload]');
+    if (source?.textContent) mountJourney(root, JSON.parse(source.textContent));
+  });
+</script>
