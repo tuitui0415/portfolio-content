@@ -1,0 +1,31 @@
+import type { ProjectMedia } from './types';
+
+const accents = ['#e8b45b', '#76b9a5', '#d9826b', '#9f8bc8', '#7da5d8'];
+
+const realMedia: Record<string, ProjectMedia> = {
+  'mont-saint-michel-castle': {
+    kind: 'image',
+    src: '/portfolio-content/generated/projects/mont-saint-michel-castle.png',
+    alt: { zh: '圣米歇尔山城堡项目预览', en: 'Mont Saint-Michel Castle project preview' },
+    accent: '#d6a85f',
+  },
+  'multiplayer-xr-drone-game': {
+    kind: 'image',
+    src: '/portfolio-content/generated/projects/multiplayer-xr-drone-game.png',
+    alt: { zh: '无人机 XR 项目报告预览', en: 'Drone XR project report preview' },
+    accent: '#72b5c4',
+  },
+  'interpretable-nsfw-text-moderation': {
+    kind: 'image',
+    src: '/portfolio-content/generated/projects/interpretable-nsfw-text-moderation.png',
+    alt: { zh: '可解释文本审核报告预览', en: 'Interpretable text moderation report preview' },
+    accent: '#c6859f',
+  },
+};
+
+export function getProjectMedia(projectId: string): ProjectMedia {
+  if (realMedia[projectId]) return realMedia[projectId];
+  let hash = 0;
+  for (const character of projectId) hash = (hash * 31 + character.charCodeAt(0)) >>> 0;
+  return { kind: 'concept', accent: accents[hash % accents.length] };
+}
