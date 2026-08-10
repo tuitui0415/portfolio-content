@@ -8,6 +8,11 @@
 
 This independently developed UE5 music-programming prototype separates one composition into instrument layers. Environmental interactions add corresponding stems to the synchronized mix until the complete musical arrangement emerges.
 
+## 时间 / Date
+
+- 2022 年春季学季（本科大三；按 UCSC 校历暂记为 2022 年 4月至6月）
+- Spring quarter 2022 (junior year; recorded as April–June based on the UCSC academic calendar)
+
 ## 已确认贡献 / Confirmed Contribution
 
 - 音乐系统设计 / Music systems design
@@ -21,7 +26,6 @@ This independently developed UE5 music-programming prototype separates one compo
 
 ## 待确认 / Open Questions
 
-- 项目的准确开发时间是什么？
 - 使用了哪些 UE5 音频系统、蓝图或代码技术？
 - 不同环境元素分别如何触发或控制乐器层？
 - 音乐和音频素材的制作与授权来源是什么？

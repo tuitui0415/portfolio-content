@@ -3,7 +3,7 @@
   "title": {"zh": "UE5 自适应分层音乐系统", "en": "UE5 Adaptive Layered Music System"},
   "type": "solo-project",
   "status": "video-demonstrated-prototype",
-  "dates": {"start": "", "end": ""},
+  "dates": {"start": "2022-04", "end": "2022-06", "context": {"zh": "本科大三春季学季，月份依据 UCSC 校历范围换算", "en": "Junior-year spring quarter; months inferred from the UCSC academic calendar"}},
   "team": {"size": 1, "context": {"zh": "个人独立项目", "en": "Independently completed solo project"}},
   "roles": {"zh": ["音乐系统设计", "UE5 程序开发", "交互设计"], "en": ["Music Systems Design", "UE5 Programming", "Interaction Design"]},
   "tools": ["Unreal Engine 5"],
@@ -23,6 +23,6 @@
     "full": {"zh": "项目探索音乐与环境交互之间的直接映射：同一段音乐被拆分为多个乐器声部，玩家触发不同环境元素时，相应声部加入并与已有声部同步叠加，最终组合成完整音乐。", "en": "The project explores a direct mapping between music and environmental interaction. One composition is separated into instrument stems; as the player triggers different environmental elements, corresponding stems join the synchronized mix until the full arrangement is formed."}
   },
   "link_ids": ["final-video-drive"],
-  "sources": ["Owner statement", "Public Final Video demonstration"],
-  "questions": ["项目的准确开发时间是什么？", "使用了哪些 UE5 音频系统、蓝图或代码技术？", "不同环境元素分别如何触发或控制乐器层？", "音乐和音频素材是否由你制作，或来自可公开使用的第三方素材？"]
+  "sources": ["Owner statement", "Public Final Video demonstration", "Owner-confirmed junior-year spring quarter"],
+  "questions": ["使用了哪些 UE5 音频系统、蓝图或代码技术？", "不同环境元素分别如何触发或控制乐器层？", "音乐和音频素材是否由你制作，或来自可公开使用的第三方素材？"]
 }
