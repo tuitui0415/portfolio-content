@@ -10,7 +10,7 @@ A Game Jam team project in which Yunhan Wei organized the team, contributed game
 
 ## 已知信息 / Known Facts
 
-- 时间：2021.12-2022.03
+- 时间：2021.12-2022.01
 - 工具：Unity、Shader
 - 职责：团队组织、游戏策划、程序开发
 

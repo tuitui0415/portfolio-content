@@ -34,5 +34,4 @@ Raymond Kang handled base-model fine-tuning, RISE adaptation, concept-head train
 
 ## 待补充 / Open Questions
 
-- 项目完成日期
 - 可公开的在线演示或界面截图

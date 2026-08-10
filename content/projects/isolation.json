@@ -3,7 +3,7 @@
   "title": {"zh": "隔离", "en": "Isolation"},
   "type": "solo-project",
   "status": "completed-prototype",
-  "dates": {"start": "2021-12", "end": "2022-12"},
+  "dates": {"start": "2021-12", "end": "2022-06"},
   "team": {"size": 1, "context": {"zh": "个人项目；室友参与牌局试玩", "en": "Solo project; roommates supported card-game playtesting"}},
   "roles": {"zh": ["游戏设计", "程序开发", "2D 角色美术", "3D 环境与道具", "UI 动画"], "en": ["Game Design", "Programming", "2D Character Art", "3D Environment and Props", "UI Animation"]},
   "tools": ["Unity", "Photoshop", "Maya", "ZBrush", "Spine"],

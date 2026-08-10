@@ -11,7 +11,7 @@ Isolation is a narrative card game about loneliness, self-perception, and social
 ## 项目信息 / Project Facts
 
 - 类型：个人项目
-- 时间：2021.12-2022.12
+- 时间：2021.12-2022.06
 - 职责：游戏设计、程序开发、2D 角色、3D 环境与道具、UI 动画
 - 工具：Unity、Photoshop、Maya、ZBrush、Spine
 - 试玩：室友参与牌局测试

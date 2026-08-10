@@ -64,5 +64,5 @@
   },
   "link_ids": ["nsfw-moderation-repository"],
   "sources": ["Owner-provided project report", "Raymond Kang's public project repository and branch"],
-  "questions": ["项目完成日期是什么？", "是否有可公开的仪表板在线演示或截图？"]
+  "questions": ["是否有可公开的仪表板在线演示或截图？"]
 }

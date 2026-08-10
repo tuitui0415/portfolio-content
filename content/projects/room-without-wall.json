@@ -3,7 +3,7 @@
   "title": {"zh": "A Room Without Wall", "en": "A Room Without Wall"},
   "type": "game-jam",
   "status": "completed",
-  "dates": {"start": "2021-12", "end": "2022-03"},
+  "dates": {"start": "2021-12", "end": "2022-01"},
   "team": {"size": null, "context": {"zh": "Game Jam 小团队", "en": "Small Game Jam team"}},
   "roles": {"zh": ["团队组织", "游戏策划", "程序开发"], "en": ["Team Organization", "Game Design", "Programming"]},
   "tools": ["Unity", "Shader"],
