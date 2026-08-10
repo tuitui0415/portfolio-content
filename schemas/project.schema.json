@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tuitui0415/portfolio-content/schemas/project.schema.json",
+  "title": "Portfolio project",
+  "type": "object",
+  "required": ["id", "title", "type", "status", "dates", "team", "roles", "tools", "summary", "design", "copy", "link_ids", "sources", "questions"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "title": {"$ref": "#/$defs/localizedString"},
+    "type": {"type": "string"},
+    "status": {"type": "string"},
+    "dates": {"type": "object"},
+    "team": {"type": "object"},
+    "roles": {"$ref": "#/$defs/localizedArray"},
+    "tools": {"type": "array", "items": {"type": "string"}},
+    "summary": {"$ref": "#/$defs/localizedString"},
+    "design": {"type": "object"},
+    "copy": {"type": "object"},
+    "link_ids": {"type": "array", "items": {"type": "string"}},
+    "sources": {"type": "array"},
+    "questions": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "localizedString": {"type": "object", "required": ["zh", "en"], "properties": {"zh": {"type": "string"}, "en": {"type": "string"}}, "additionalProperties": false},
+    "localizedArray": {"type": "object", "required": ["zh", "en"], "properties": {"zh": {"type": "array", "items": {"type": "string"}}, "en": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": false}
+  }
+}

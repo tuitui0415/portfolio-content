@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tuitui0415/portfolio-content/schemas/external-links.schema.json",
+  "title": "Portfolio external links",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "label", "url", "project_id", "type", "access", "checked_at", "evidence", "action"],
+    "properties": {
+      "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+      "label": {"type": "object"},
+      "url": {"type": "string"},
+      "project_id": {"type": "string"},
+      "type": {"type": "string"},
+      "access": {"enum": ["public", "restricted", "broken", "unclear"]},
+      "checked_at": {"type": "string"},
+      "evidence": {"type": "string"},
+      "action": {"type": "string"}
+    },
+    "additionalProperties": false
+  }
+}
