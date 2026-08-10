@@ -30,12 +30,12 @@ jobs:
         run: |
           python -m pip install pypdf
           npm ci
+      - name: Build static site
+        run: npm run build
       - name: Validate content and unit tests
         run: |
           python3 -m unittest discover -s tests -t . -v
           npm test
-      - name: Build static site
-        run: npm run build
       - name: Install browser
         run: npx playwright install --with-deps chromium
       - name: Test production site
