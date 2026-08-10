@@ -24,5 +24,5 @@
   },
   "link_ids": ["final-video-drive"],
   "sources": ["Owner statement", "Public Final Video demonstration", "Owner-confirmed junior-year spring quarter"],
-  "questions": ["使用了哪些 UE5 音频系统或模块？", "不同环境元素分别如何触发或控制乐器层？", "音乐和音频素材是否由你制作，或来自可公开使用的第三方素材？"]
+  "questions": ["不同环境元素分别如何触发或控制乐器层？", "音乐和音频素材是否由你制作，或来自可公开使用的第三方素材？"]
 }

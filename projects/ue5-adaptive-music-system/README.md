@@ -26,6 +26,5 @@ This independently developed UE5 music-programming prototype separates one compo
 
 ## 待确认 / Open Questions
 
-- 使用了哪些 UE5 音频系统或模块？
 - 不同环境元素分别如何触发或控制乐器层？
 - 音乐和音频素材的制作与授权来源是什么？
