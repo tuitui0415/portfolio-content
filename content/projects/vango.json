@@ -7,7 +7,7 @@
   "team": {"size": null, "context": {"zh": "现有网站未说明", "en": "Not stated on the legacy portfolio"}},
   "roles": {"zh": ["UI 设计"], "en": ["UI Design"]},
   "tools": ["Figma"],
-  "summary": {"zh": "现有个人网站链接的 Figma 交互原型，公开页面标题为 Vango。", "en": "A Figma interactive prototype linked from the legacy portfolio and publicly titled Vango."},
+  "summary": {"zh": "Vango 是一款用于浏览与介绍游戏作品的 Figma 交互原型。原型包含作品发现、分类筛选、详情浏览、搜索、评论、个人主页及内容发布等界面流程。", "en": "Vango is a Figma interactive prototype for discovering, browsing, and presenting game projects. It includes flows for discovery, filtering, project details, search, comments, user profiles, and content publishing."},
   "design": {"goals": {"zh": [], "en": []}, "mechanics": {"zh": [], "en": []}, "decisions": {"zh": [], "en": []}, "iteration": {"zh": [], "en": []}},
   "copy": {"resume": {"zh": [], "en": []}, "website": {"zh": "", "en": ""}, "full": {"zh": "", "en": ""}},
   "link_ids": ["vango-figma-prototype"],

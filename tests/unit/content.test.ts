@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { loadPortfolio, localizePortfolio, sortProjectsChronologically } from '../../src/lib/content/load';
+import { getProjectMedia } from '../../src/lib/content/media';
 
 describe('portfolio content', () => {
   it('loads every project with a confirmed start date', () => {
@@ -19,5 +20,13 @@ describe('portfolio content', () => {
     const project = portfolio.projects.find(({ id }) => id === 'interpretable-nsfw-text-moderation');
     expect(project?.teamContext).toContain('Raymond');
     expect(project?.links.some(({ url }) => url.includes('github.com'))).toBe(true);
+  });
+
+  it('uses the complete Vango screenshot as real project media', () => {
+    expect(getProjectMedia('vango')).toMatchObject({
+      kind: 'image',
+      src: '/portfolio-content/generated/projects/vango.webp',
+      fit: 'contain',
+    });
   });
 });
