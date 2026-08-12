@@ -17,6 +17,8 @@ const formatDate = (value: string) => {
 };
 const date = project.dates.end ? `${formatDate(project.dates.start)} — ${formatDate(project.dates.end)}` : formatDate(project.dates.start);
 const type = projectTypeLabels[locale][project.type] ?? project.type.replaceAll('-', ' ');
+const hasKnownTeam = Boolean(project.teamContext)
+  && !['现有网站未说明', 'Not stated on the legacy portfolio'].includes(project.teamContext);
 const sections = [
   { key: 'goals', number: '01', title: isZh ? '设计目标' : 'Design Goals', items: project.design.goals },
   { key: 'mechanics', number: '02', title: isZh ? '核心机制' : 'Core Mechanics', items: project.design.mechanics },
@@ -38,7 +40,7 @@ const sections = [
       <dl class="project-meta">
         <div><dt>{isZh ? '时间' : 'Date'}</dt><dd>{date}</dd></div>
         <div><dt>{isZh ? '职责' : 'Role'}</dt><dd>{project.roles.join(' · ')}</dd></div>
-        {project.teamSize > 0 && <div><dt>{isZh ? '团队' : 'Team'}</dt><dd>{project.teamContext}</dd></div>}
+        {hasKnownTeam && <div><dt>{isZh ? '团队' : 'Team'}</dt><dd>{project.teamContext}</dd></div>}
       </dl>
       {project.links.length > 0 && <div class="project-links">
         {project.links.map((link) => <a class="button" href={link.url} target="_blank" rel="noreferrer">{link.label}<span aria-hidden="true"> ↗</span></a>)}
