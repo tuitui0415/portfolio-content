@@ -1,19 +1,20 @@
-# psychotherapy
+# Psychotherapy
 
 ## 中文概述
 
-使用 Ink 制作的网页互动叙事项目。现有页面可运行并提供重新开始、保存和读取功能，但网页标题仍为 `RandomOrderTemplate`，缺少正式项目说明。
+Psychotherapy 是一款使用 Ink 制作的网页互动叙事项目。玩家扮演精神科医生，通过与一名拥有四种人格的特殊患者交谈，在随机出现的人格片段中收集相互关联的线索，逐步整理患者身份、经历与问题并完成诊断。项目支持分支选择、重新开始、存档与读档。
 
 ## English Overview
 
-A web-based interactive-fiction project built with Ink. The public page runs and includes restart, save, and load controls, but still uses the title `RandomOrderTemplate` and lacks project context.
+Psychotherapy is a web-based interactive fiction project created with Ink. The player takes the role of a psychiatrist interviewing a patient with four personalities, collecting connected clues from randomly presented personality scenes to reconstruct the patient’s identity, history, and condition. The project supports branching choices, restart, save, and load.
 
-## Links
+## Project Information
 
+- 时间 / Date: 2020.04–2020.06
+- 职责 / Role: 程序开发 / Programming
+- 工具 / Tool: Ink
 - [Playable Ink web build](https://weitiange.github.io/DefensiveCharaterWriting/)
 
-## 待确认 / Open Questions
+## 待确认 / Open Question
 
-- 正式中英文名称是什么？
-- 故事主题、玩家目标和核心分支结构是什么？
-- 项目日期、团队规模和具体程序职责是什么？
+- 团队规模是否需要补充？ / Should the team size be added?

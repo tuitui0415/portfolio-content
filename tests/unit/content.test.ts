@@ -29,4 +29,20 @@ describe('portfolio content', () => {
       fit: 'contain',
     });
   });
+
+  it('presents Psychotherapy with confirmed content and both real screenshots', () => {
+    const portfolio = localizePortfolio(loadPortfolio(), 'en');
+    const project = portfolio.projects.find(({ id }) => id === 'psychotherapy');
+
+    expect(project?.title).toBe('Psychotherapy');
+    expect(project?.summary).toContain('four personalities');
+    expect(getProjectMedia('psychotherapy')).toMatchObject({
+      kind: 'image',
+      src: '/portfolio-content/generated/projects/psychotherapy-code.webp',
+      fit: 'contain',
+      detail: {
+        src: '/portfolio-content/generated/projects/psychotherapy-gameplay.webp',
+      },
+    });
+  });
 });

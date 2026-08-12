@@ -40,6 +40,9 @@
 .project-overview > p:not(.eyebrow) { margin: 0; font: 500 clamp(1.5rem, 3vw, 3rem)/1.45 var(--serif); color: var(--paper); }
 .tool-strip { grid-column: 2; display: flex; flex-wrap: wrap; gap: .5rem; }
 .tool-strip span { padding: .35rem .55rem; border: 1px solid rgba(95,162,147,.28); color: #8fa198; font: .58rem var(--mono); }
+.project-evidence { grid-column: 1 / -1; margin: 2rem 0 0; border: 1px solid rgba(214,168,95,.2); background: #f5f5f3; box-shadow: 0 20px 55px rgba(0,0,0,.22); }
+.project-evidence img { display: block; width: 100%; height: auto; }
+.project-evidence figcaption { padding: .75rem 1rem; border-top: 1px solid rgba(10,16,15,.12); color: #5e6d65; background: #e8ebe6; font: .55rem var(--mono); letter-spacing: .09em; text-transform: uppercase; }
 .project-sections { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(214,168,95,.14); }
 .project-sections section { display: grid; grid-template-columns: 40px 1fr; padding: clamp(2rem, 5vw, 4.5rem); border-right: 1px solid rgba(214,168,95,.14); border-bottom: 1px solid rgba(214,168,95,.14); }
 .project-sections section:nth-child(even) { border-right: 0; }

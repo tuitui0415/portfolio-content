@@ -55,6 +55,12 @@ const sections = [
     <p class="eyebrow">{isZh ? '档案摘要' : 'ARCHIVE ABSTRACT'}</p>
     <p>{project.websiteCopy || project.summary}</p>
     <div class="tool-strip" aria-label={isZh ? '工具' : 'Tools'}>{project.tools.map((tool) => <span>{tool}</span>)}</div>
+    {media.detail && (
+      <figure class="project-evidence">
+        <img src={media.detail.src} alt={media.detail.alt[locale]} width="1686" height="1174" loading="lazy" />
+        <figcaption>{isZh ? '可玩版本界面' : 'Playable build interface'}</figcaption>
+      </figure>
+    )}
   </section>
 
   <div class="project-sections">

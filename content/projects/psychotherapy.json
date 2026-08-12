@@ -1,16 +1,16 @@
 {
   "id": "psychotherapy",
-  "title": {"zh": "psychotherapy", "en": "psychotherapy"},
+  "title": {"zh": "Psychotherapy", "en": "Psychotherapy"},
   "type": "interactive-fiction",
   "status": "playable-web-build",
   "dates": {"start": "2020-04", "end": "2020-06", "context": {"zh": "本科大一春季学季，月份依据 UCSC 校历范围换算", "en": "First-year spring quarter; months inferred from the UCSC academic calendar"}},
   "team": {"size": null, "context": {"zh": "现有网站未说明", "en": "Not stated on the legacy portfolio"}},
   "roles": {"zh": ["程序开发"], "en": ["Programming"]},
   "tools": ["Ink"],
-  "summary": {"zh": "本科大一春季使用 Ink 制作的网页互动叙事项目，包含分支叙事、存档与读档功能。", "en": "A web-based Ink interactive-fiction project completed during the first undergraduate spring quarter, with branching narrative and save/load functionality."},
-  "design": {"goals": {"zh": [], "en": []}, "mechanics": {"zh": ["分支叙事", "存档与读档"], "en": ["Branching narrative", "Save and load"]}, "decisions": {"zh": [], "en": []}, "iteration": {"zh": [], "en": []}},
-  "copy": {"resume": {"zh": [], "en": []}, "website": {"zh": "", "en": ""}, "full": {"zh": "", "en": ""}},
+  "summary": {"zh": "Psychotherapy 是一款使用 Ink 制作的网页互动叙事项目。玩家扮演精神科医生，通过与一名拥有四种人格的特殊患者交谈，在随机出现的人格片段中收集相互关联的线索，逐步整理患者身份、经历与问题并完成诊断。项目支持分支选择、重新开始、存档与读档。", "en": "Psychotherapy is a web-based interactive fiction project created with Ink. The player takes the role of a psychiatrist interviewing a patient with four personalities, collecting connected clues from randomly presented personality scenes to reconstruct the patient’s identity, history, and condition. The project supports branching choices, restart, save, and load."},
+  "design": {"goals": {"zh": ["让玩家从不同人格的叙述中拼合患者经历并完成诊断。"], "en": ["Let the player reconstruct the patient’s history from different personalities and complete a diagnosis."]}, "mechanics": {"zh": ["分支叙事", "随机人格场景与线索收集", "病例档案整理", "存档与读档"], "en": ["Branching narrative", "Random personality scenes and clue collection", "Case-file reconstruction", "Save and load"]}, "decisions": {"zh": ["将四种人格拆分为独立 Ink 场景，以随机顺序呈现，并在全部场景完成后进入病例档案整理。"], "en": ["Split the four personalities into separate Ink scenes, present them in random order, and move to case-file reconstruction after every scene has been completed."]}, "iteration": {"zh": [], "en": []}},
+  "copy": {"resume": {"zh": [], "en": []}, "website": {"zh": "Psychotherapy 是一款使用 Ink 制作的网页互动叙事项目。玩家扮演精神科医生，通过与一名拥有四种人格的特殊患者交谈，在随机出现的人格片段中收集相互关联的线索，逐步整理患者身份、经历与问题并完成诊断。项目支持分支选择、重新开始、存档与读档。", "en": "Psychotherapy is a web-based interactive fiction project created with Ink. The player takes the role of a psychiatrist interviewing a patient with four personalities, collecting connected clues from randomly presented personality scenes to reconstruct the patient’s identity, history, and condition. The project supports branching choices, restart, save, and load."}, "full": {"zh": "", "en": ""}},
   "link_ids": ["psychotherapy-playable-page"],
-  "sources": ["Legacy portfolio", "Public Ink web build"],
-  "questions": ["项目的正式中英文名称是什么？", "故事主题、玩家目标和核心分支结构是什么？", "团队规模和你的具体程序职责是什么？"]
+  "sources": ["Legacy portfolio", "Public Ink web build", "User-supplied project screenshots"],
+  "questions": ["团队规模是否需要补充？"]
 }

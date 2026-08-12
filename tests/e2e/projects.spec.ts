@@ -29,3 +29,18 @@ test('Vango shows the user-authored summary and complete screenshot', async ({ p
   await expect(page.locator('.real-media--contain img')).toHaveAttribute('src', '/portfolio-content/generated/projects/vango.webp');
   await expect(page.getByText('概念视觉')).toHaveCount(0);
 });
+
+test('Psychotherapy shows confirmed copy and both real project screenshots', async ({ page }) => {
+  await page.goto('/portfolio-content/zh/projects/psychotherapy/');
+  await expect(page.getByRole('heading', { name: 'Psychotherapy' })).toBeVisible();
+  await expect(page.getByText(/玩家扮演精神科医生，通过与一名拥有四种人格的特殊患者交谈/).first()).toBeVisible();
+  await expect(page.locator('.real-media--contain img')).toHaveAttribute(
+    'src',
+    '/portfolio-content/generated/projects/psychotherapy-code.webp',
+  );
+  await expect(page.locator('.project-evidence img')).toHaveAttribute(
+    'src',
+    '/portfolio-content/generated/projects/psychotherapy-gameplay.webp',
+  );
+  await expect(page.getByText('概念视觉')).toHaveCount(0);
+});

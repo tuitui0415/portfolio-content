@@ -125,4 +125,8 @@ export interface ProjectMedia {
   alt?: LocalizedText;
   accent: string;
   fit?: 'cover' | 'contain';
+  detail?: {
+    src: string;
+    alt: LocalizedText;
+  };
 }

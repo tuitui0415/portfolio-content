@@ -13,6 +13,23 @@ const realMedia: Record<string, ProjectMedia> = {
     accent: '#b7c66b',
     fit: 'contain',
   },
+  psychotherapy: {
+    kind: 'image',
+    src: '/portfolio-content/generated/projects/psychotherapy-code.webp',
+    alt: {
+      zh: 'Psychotherapy 的 Ink 场景代码与项目文件结构',
+      en: 'Psychotherapy Ink scene code and project file structure',
+    },
+    accent: '#78a7d8',
+    fit: 'contain',
+    detail: {
+      src: '/portfolio-content/generated/projects/psychotherapy-gameplay.webp',
+      alt: {
+        zh: 'Psychotherapy 网页互动叙事的剧情选择界面',
+        en: 'Psychotherapy web interactive-fiction choice interface',
+      },
+    },
+  },
   'mont-saint-michel-castle': {
     kind: 'image',
     src: '/portfolio-content/generated/projects/mont-saint-michel-castle.webp',
