@@ -3,16 +3,6 @@ import type { ProjectMedia } from './types';
 const accents = ['#e8b45b', '#76b9a5', '#d9826b', '#9f8bc8', '#7da5d8'];
 
 const realMedia: Record<string, ProjectMedia> = {
-  vango: {
-    kind: 'image',
-    src: '/portfolio-content/generated/projects/vango.webp',
-    alt: {
-      zh: 'Vango 的 Figma 页面结构与主要交互流程',
-      en: 'Vango’s Figma screen structure and primary interaction flows',
-    },
-    accent: '#b7c66b',
-    fit: 'contain',
-  },
   'mont-saint-michel-castle': {
     kind: 'image',
     src: '/portfolio-content/generated/projects/mont-saint-michel-castle.webp',

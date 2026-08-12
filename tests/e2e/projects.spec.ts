@@ -22,12 +22,3 @@ test('public dossiers omit unavailable-source and missing-context notes', async 
   await page.goto('/portfolio-content/zh/projects/psychotherapy/');
   await expect(page.getByText(/缺少项目背景说明/)).toHaveCount(0);
 });
-
-test('Vango presents the confirmed team prototype with a real workflow image', async ({ page }) => {
-  await page.goto('/portfolio-content/zh/projects/vango/');
-  await expect(page.getByText('团队项目')).toBeVisible();
-  await expect(page.getByText(/用于浏览与介绍游戏作品的 Figma 交互原型/).first()).toBeVisible();
-  await expect(page.locator('.real-media--contain img')).toHaveAttribute('src', '/portfolio-content/generated/projects/vango.webp');
-  await expect(page.getByText('概念视觉')).toHaveCount(0);
-  await expect(page.getByRole('link', { name: /Figma/ })).toBeVisible();
-});

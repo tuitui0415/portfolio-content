@@ -4,13 +4,13 @@
   "type": "ui-ux-prototype",
   "status": "figma-prototype",
   "dates": {"start": "2019-09", "end": "2019-12", "context": {"zh": "本科大一秋季学季，月份依据 UCSC 校历范围换算", "en": "First-year fall quarter; months inferred from the UCSC academic calendar"}},
-  "team": {"size": null, "context": {"zh": "团队项目", "en": "Team project"}},
+  "team": {"size": null, "context": {"zh": "现有网站未说明", "en": "Not stated on the legacy portfolio"}},
   "roles": {"zh": ["UI 设计"], "en": ["UI Design"]},
   "tools": ["Figma"],
-  "summary": {"zh": "用于浏览与介绍游戏作品的 Figma 交互原型。", "en": "A Figma interactive prototype for browsing and presenting game projects."},
+  "summary": {"zh": "现有个人网站链接的 Figma 交互原型，公开页面标题为 Vango。", "en": "A Figma interactive prototype linked from the legacy portfolio and publicly titled Vango."},
   "design": {"goals": {"zh": [], "en": []}, "mechanics": {"zh": [], "en": []}, "decisions": {"zh": [], "en": []}, "iteration": {"zh": [], "en": []}},
-  "copy": {"resume": {"zh": [], "en": []}, "website": {"zh": "Vango 是一款用于浏览与介绍游戏作品的 Figma 交互原型。原型包含作品发现、分类筛选、详情浏览、搜索、评论、个人主页及内容发布等界面流程。", "en": "Vango is a Figma interactive prototype for discovering, browsing, and presenting game projects. It includes flows for discovery, filtering, project details, search, comments, user profiles, and content publishing."}, "full": {"zh": "Vango 是一款用于浏览与介绍游戏作品的 Figma 交互原型。原型包含作品发现、分类筛选、详情浏览、搜索、评论、个人主页及内容发布等界面流程。", "en": "Vango is a Figma interactive prototype for discovering, browsing, and presenting game projects. It includes flows for discovery, filtering, project details, search, comments, user profiles, and content publishing."}},
+  "copy": {"resume": {"zh": [], "en": []}, "website": {"zh": "", "en": ""}, "full": {"zh": "", "en": ""}},
   "link_ids": ["vango-figma-prototype"],
-  "sources": ["User-confirmed project description", "User-supplied Figma canvas screenshot", "Figma public prototype"],
-  "questions": []
+  "sources": ["Legacy portfolio", "Figma public metadata"],
+  "questions": ["Vango 的产品目标、目标用户和主要流程是什么？", "这是个人还是团队项目，你负责哪些页面和研究工作？", "最终交付要求是什么？"]
 }

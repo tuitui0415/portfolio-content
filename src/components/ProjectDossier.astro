@@ -17,8 +17,6 @@ const formatDate = (value: string) => {
 };
 const date = project.dates.end ? `${formatDate(project.dates.start)} — ${formatDate(project.dates.end)}` : formatDate(project.dates.start);
 const type = projectTypeLabels[locale][project.type] ?? project.type.replaceAll('-', ' ');
-const hasKnownTeam = Boolean(project.teamContext)
-  && !['现有网站未说明', 'Not stated on the legacy portfolio'].includes(project.teamContext);
 const sections = [
   { key: 'goals', number: '01', title: isZh ? '设计目标' : 'Design Goals', items: project.design.goals },
   { key: 'mechanics', number: '02', title: isZh ? '核心机制' : 'Core Mechanics', items: project.design.mechanics },
@@ -40,7 +38,7 @@ const sections = [
       <dl class="project-meta">
         <div><dt>{isZh ? '时间' : 'Date'}</dt><dd>{date}</dd></div>
         <div><dt>{isZh ? '职责' : 'Role'}</dt><dd>{project.roles.join(' · ')}</dd></div>
-        {hasKnownTeam && <div><dt>{isZh ? '团队' : 'Team'}</dt><dd>{project.teamContext}</dd></div>}
+        {project.teamSize > 0 && <div><dt>{isZh ? '团队' : 'Team'}</dt><dd>{project.teamContext}</dd></div>}
       </dl>
       {project.links.length > 0 && <div class="project-links">
         {project.links.map((link) => <a class="button" href={link.url} target="_blank" rel="noreferrer">{link.label}<span aria-hidden="true"> ↗</span></a>)}
@@ -48,7 +46,7 @@ const sections = [
     </div>
     <div class="project-visual">
       {media.kind === 'image' && media.src
-        ? <figure class:list={['real-media', media.fit === 'contain' && 'real-media--contain']}><img src={media.src} alt={media.alt?.[locale] ?? ''} width="900" height="1165" loading="eager" /><figcaption>{isZh ? '项目原始材料预览' : 'Original project material'}</figcaption></figure>
+        ? <figure class="real-media"><img src={media.src} alt={media.alt?.[locale] ?? ''} width="900" height="1165" loading="eager" /><figcaption>{isZh ? '项目原始材料预览' : 'Original project material'}</figcaption></figure>
         : <ConceptCover projectId={project.id} title={project.title} locale={locale} accent={media.accent} />}
     </div>
   </header>
