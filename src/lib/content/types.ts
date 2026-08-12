@@ -124,4 +124,5 @@ export interface ProjectMedia {
   src?: string;
   alt?: LocalizedText;
   accent: string;
+  fit?: 'cover' | 'contain';
 }

@@ -17,6 +17,8 @@
 .project-visual { position: relative; min-height: 600px; overflow: hidden; background: radial-gradient(circle at 50% 30%, color-mix(in srgb, var(--project-accent) 22%, transparent), transparent 56%), #080e0d; }
 .real-media { position: absolute; inset: 0; margin: 0; }
 .real-media img { width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: saturate(.8) contrast(1.03); }
+.real-media--contain { padding: clamp(.8rem, 2vw, 1.5rem); background: #e7e7e7; }
+.real-media--contain img { object-fit: contain; filter: none; }
 .real-media::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 100px rgba(0,0,0,.55); pointer-events: none; }
 .real-media figcaption { position: absolute; z-index: 2; right: 1rem; bottom: 1rem; padding: .45rem .6rem; color: var(--paper); background: rgba(8,14,13,.85); font: .55rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
 

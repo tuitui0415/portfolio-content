@@ -46,7 +46,7 @@ const sections = [
     </div>
     <div class="project-visual">
       {media.kind === 'image' && media.src
-        ? <figure class="real-media"><img src={media.src} alt={media.alt?.[locale] ?? ''} width="900" height="1165" loading="eager" /><figcaption>{isZh ? '项目原始材料预览' : 'Original project material'}</figcaption></figure>
+        ? <figure class:list={['real-media', media.fit === 'contain' && 'real-media--contain']}><img src={media.src} alt={media.alt?.[locale] ?? ''} width="900" height="1165" loading="eager" /><figcaption>{isZh ? '项目原始材料预览' : 'Original project material'}</figcaption></figure>
         : <ConceptCover projectId={project.id} title={project.title} locale={locale} accent={media.accent} />}
     </div>
   </header>
