@@ -16,6 +16,7 @@ class AssetHygieneTests(unittest.TestCase):
             ROOT / "projects/mont-saint-michel-castle/assets/level-preview.png",
             ROOT / "projects/mont-saint-michel-castle/technical-overview.md",
             ROOT / "projects/mont-saint-michel-castle/package-readme.md",
+            ROOT / "assets/previews/vango.webp",
         ]
         for path in expected:
             self.assertTrue(path.is_file(), str(path))
