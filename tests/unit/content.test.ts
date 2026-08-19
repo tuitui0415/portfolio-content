@@ -59,4 +59,12 @@ describe('portfolio content', () => {
       fit: 'contain',
     });
   });
+
+  it('uses the supplied Slacker Simulator image as real project media', () => {
+    expect(getProjectMedia('slacker-simulator')).toMatchObject({
+      kind: 'image',
+      src: '/portfolio-content/generated/projects/slacker-simulator.webp',
+      fit: 'contain',
+    });
+  });
 });

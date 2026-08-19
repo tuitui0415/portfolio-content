@@ -40,6 +40,16 @@ const realMedia: Record<string, ProjectMedia> = {
     accent: '#55a9dc',
     fit: 'contain',
   },
+  'slacker-simulator': {
+    kind: 'image',
+    src: '/portfolio-content/generated/projects/slacker-simulator.webp',
+    alt: {
+      zh: 'Slacker Simulator 的红色人物档案主视觉',
+      en: 'The red character-profile artwork for Slacker Simulator',
+    },
+    accent: '#d71920',
+    fit: 'contain',
+  },
   'mont-saint-michel-castle': {
     kind: 'image',
     src: '/portfolio-content/generated/projects/mont-saint-michel-castle.webp',

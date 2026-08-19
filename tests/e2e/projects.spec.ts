@@ -55,3 +55,13 @@ test('Fishing on a Flat Earth shows the spherical-ocean concept without a role f
   await expect(page.locator('.project-meta dt').filter({ hasText: '职责' })).toHaveCount(0);
   await expect(page.getByText('概念视觉')).toHaveCount(0);
 });
+
+test('Slacker Simulator shows the supplied project image and keeps its archived link', async ({ page }) => {
+  await page.goto('/portfolio-content/zh/projects/slacker-simulator/');
+  await expect(page.locator('.real-media--contain img')).toHaveAttribute(
+    'src',
+    '/portfolio-content/generated/projects/slacker-simulator.webp',
+  );
+  await expect(page.getByRole('link', { name: /Slacker Simulator 文件/ })).toBeVisible();
+  await expect(page.getByText('概念视觉')).toHaveCount(0);
+});
