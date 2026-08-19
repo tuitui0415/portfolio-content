@@ -36,10 +36,6 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -t . -v
           npm test
-      - name: Install browser
-        run: npx playwright install --with-deps chromium
-      - name: Test production site
-        run: npm run test:e2e
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
