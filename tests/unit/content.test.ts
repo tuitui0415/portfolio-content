@@ -5,8 +5,14 @@ import { getProjectMedia } from '../../src/lib/content/media';
 describe('portfolio content', () => {
   it('loads every project with a confirmed start date', () => {
     const data = loadPortfolio();
-    expect(data.projects).toHaveLength(15);
+    expect(data.projects).toHaveLength(14);
     expect(data.projects.every((project) => /^\d{4}-\d{2}$/.test(project.dates.start))).toBe(true);
+  });
+
+  it('keeps Fishing on a Flat Earth as the single spherical-world project record', () => {
+    const ids = loadPortfolio().projects.map((project) => project.id);
+    expect(ids).toContain('fishing-on-a-flat-earth');
+    expect(ids).not.toContain('room-without-wall');
   });
 
   it('orders the archive from Vango to the July 2026 projects', () => {

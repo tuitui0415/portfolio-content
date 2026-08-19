@@ -18,7 +18,12 @@ test('keyboard movement changes the reported librarian position', async ({ page 
   await expect.poll(() => root.getAttribute('data-player-x')).not.toBe(before);
 });
 
-test('the no-script chronological list exposes every project', async ({ page }) => {
+test('the timeline exposes fourteen distinct project records', async ({ page }) => {
   await page.goto('/portfolio-content/zh/journey/');
-  await expect(page.locator('.journey-fallback li')).toHaveCount(15);
+  await expect(page.locator('.journey-fallback li')).toHaveCount(14);
+  await expect(page.locator('.journey-fallback')).not.toContainText('A Room Without Wall');
+  await expect(
+    page.locator('canvas[aria-label="可操控的像素图书馆，按时间排列 14 个项目"]'),
+  ).toBeVisible();
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', '按时间探索魏允瀚的 14 个项目。');
 });

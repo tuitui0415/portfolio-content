@@ -11,6 +11,7 @@ const layout = buildJourneyLayout(portfolio.projects);
 const first = portfolio.projects[0];
 const payload = JSON.stringify({ locale, base, layout }).replaceAll('<', '\\u003c');
 const years = new Set<number>();
+const projectCount = portfolio.projects.length;
 ---
 
 <section class="journey-shell" data-journey-root data-player-x={layout.stations[0].x} aria-labelledby="journey-title">
@@ -20,7 +21,7 @@ const years = new Set<number>();
   </header>
 
   <div class="journey-stage">
-    <canvas aria-label={isZh ? '可操控的像素图书馆，按时间排列 15 个项目' : 'Playable pixel library containing 15 chronological projects'}></canvas>
+    <canvas aria-label={isZh ? `可操控的像素图书馆，按时间排列 ${projectCount} 个项目` : `Playable pixel library containing ${projectCount} chronological projects`}></canvas>
     <div class="journey-hud">
       <p class="journey-controls-copy">{ui[locale].controls}</p>
       <p class="sr-only" aria-live="polite" data-journey-status></p>

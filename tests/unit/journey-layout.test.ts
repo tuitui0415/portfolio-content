@@ -5,7 +5,7 @@ import { buildJourneyLayout } from '../../src/lib/journey/layout';
 describe('journey layout', () => {
   it('places all projects in strictly chronological world order', () => {
     const layout = buildJourneyLayout(localizePortfolio(loadPortfolio(), 'en').projects);
-    expect(layout.stations).toHaveLength(15);
+    expect(layout.stations).toHaveLength(14);
     expect(layout.stations[0].projectId).toBe('vango');
     expect(layout.stations.every((station, index, all) => index === 0 || station.x > all[index - 1].x)).toBe(true);
     expect(layout.worldWidth).toBeGreaterThan(layout.stations.at(-1)!.x);
