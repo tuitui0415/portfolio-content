@@ -5,12 +5,36 @@
   "status": "in-development",
   "dates": {"start": "2021-04", "end": "2021-06", "context": {"zh": "本科大二春季学季，月份依据 UCSC 校历范围换算", "en": "Sophomore-year spring quarter; months inferred from the UCSC academic calendar"}},
   "team": {"size": 7, "context": {"zh": "Game Jam 团队项目", "en": "Seven-person Game Jam team"}},
-  "roles": {"zh": ["3D 建模"], "en": ["3D Modeling"]},
+  "roles": {"zh": [], "en": []},
   "tools": [],
-  "summary": {"zh": "轻松的开放世界钓鱼原型，玩家探索无尽海域并寻找更适合捕鱼的位置。", "en": "A relaxing open-world fishing prototype about exploring an endless ocean for fish and better fishing locations."},
-  "design": {"goals": {"zh": [], "en": []}, "mechanics": {"zh": ["WASD 移动", "空格钓鱼", "海域探索"], "en": ["WASD movement", "Spacebar fishing", "Ocean exploration"]}, "decisions": {"zh": [], "en": []}, "iteration": {"zh": [], "en": []}},
-  "copy": {"resume": {"zh": [], "en": []}, "website": {"zh": "作为七人团队的 3D 建模成员，参与制作一款轻松的开放世界钓鱼原型。", "en": "Contributed 3D modeling to a seven-person team's relaxing open-world fishing prototype."}, "full": {"zh": "", "en": ""}},
+  "summary": {
+    "zh": "Fishing on a Flat Earth 是一款轻松愉快的开放世界钓鱼游戏。游戏将平面海域通过渲染呈现为球体，让有限场景看起来像一片没有尽头的海洋。玩家绕过岛屿寻找鱼群和更适合钓鱼的地点，在探索中更快地钓到更多鱼。",
+    "en": "Fishing on a Flat Earth is a relaxing open-world fishing game. It renders a planar ocean as a sphere, making a limited scene feel like an endless sea. Players travel around islands, search for fish, and discover better fishing locations to catch more fish while exploring."
+  },
+  "design": {
+    "goals": {
+      "zh": ["营造轻松愉快的开放世界钓鱼体验", "让有限场景呈现出持续延伸的海洋感"],
+      "en": ["Create a relaxing open-world fishing experience", "Make a limited scene feel like an ocean that continues beyond view"]
+    },
+    "mechanics": {
+      "zh": ["探索海域并绕过岛屿", "寻找鱼群和更适合钓鱼的地点"],
+      "en": ["Explore the ocean and travel around islands", "Search for fish and better fishing locations"]
+    },
+    "decisions": {
+      "zh": ["将平面海域通过渲染呈现为球体，让玩家在有限场景中感受到连续的海洋世界"],
+      "en": ["Render the planar ocean as a sphere so a limited scene feels like one continuous ocean world"]
+    },
+    "iteration": {"zh": [], "en": []}
+  },
+  "copy": {
+    "resume": {"zh": [], "en": []},
+    "website": {
+      "zh": "Fishing on a Flat Earth 是一款轻松愉快的开放世界钓鱼游戏。游戏将平面海域通过渲染呈现为球体，让有限场景看起来像一片没有尽头的海洋。玩家绕过岛屿寻找鱼群和更适合钓鱼的地点，在探索中更快地钓到更多鱼。",
+      "en": "Fishing on a Flat Earth is a relaxing open-world fishing game. It renders a planar ocean as a sphere, making a limited scene feel like an endless sea. Players travel around islands, search for fish, and discover better fishing locations to catch more fish while exploring."
+    },
+    "full": {"zh": "", "en": ""}
+  },
   "link_ids": ["fishing-flat-earth-itch"],
-  "sources": ["itch.io description and credits", "Legacy portfolio"],
-  "questions": ["Game Jam 的名称是什么？", "你具体制作了哪些 3D 模型或场景资产？", "使用了哪些引擎和建模工具？"]
+  "sources": ["itch.io description and credits", "User-provided project screenshot and rendering description"],
+  "questions": ["Game Jam 的名称是什么？", "使用了哪些引擎和渲染工具？"]
 }

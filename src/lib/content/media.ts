@@ -30,6 +30,16 @@ const realMedia: Record<string, ProjectMedia> = {
       },
     },
   },
+  'fishing-on-a-flat-earth': {
+    kind: 'image',
+    src: '/portfolio-content/generated/projects/fishing-on-a-flat-earth.webp',
+    alt: {
+      zh: 'Fishing on a Flat Earth 的球形海域、岛屿与渔船',
+      en: 'The spherical ocean, islands, and fishing boat in Fishing on a Flat Earth',
+    },
+    accent: '#55a9dc',
+    fit: 'contain',
+  },
   'mont-saint-michel-castle': {
     kind: 'image',
     src: '/portfolio-content/generated/projects/mont-saint-michel-castle.webp',

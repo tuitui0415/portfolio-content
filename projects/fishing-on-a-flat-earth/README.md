@@ -2,18 +2,12 @@
 
 ## 中文概述
 
-一款轻松的开放世界钓鱼原型。玩家在无尽海域中探索，寻找鱼群和更高效的捕鱼位置。魏允瀚在七人团队中负责 3D 建模。
+一款轻松愉快的开放世界钓鱼游戏。游戏将平面海域通过渲染呈现为球体，让有限场景看起来像一片没有尽头的海洋。玩家绕过岛屿寻找鱼群和更适合钓鱼的地点，在探索中更快地钓到更多鱼。
 
 ## English Overview
 
-A relaxing open-world fishing prototype about exploring an endless ocean for fish and better fishing locations. Yunhan Wei contributed 3D modeling in a seven-person team.
+A relaxing open-world fishing game that renders a planar ocean as a sphere, making a limited scene feel like an endless sea. Players travel around islands, search for fish, and discover better fishing locations to catch more fish while exploring.
 
 ## Links
 
 - [itch.io page and download](https://h-ma.itch.io/jam-2-team-20-prototyping-assignment)
-
-## 待确认 / Open Questions
-
-- 准确开发日期和 Game Jam 名称是什么？
-- 具体制作了哪些 3D 模型或场景资产？
-- 使用了哪些引擎和建模工具？

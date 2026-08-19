@@ -37,7 +37,7 @@ const sections = [
       <p class="project-summary">{project.websiteCopy || project.summary}</p>
       <dl class="project-meta">
         <div><dt>{isZh ? '时间' : 'Date'}</dt><dd>{date}</dd></div>
-        <div><dt>{isZh ? '职责' : 'Role'}</dt><dd>{project.roles.join(' · ')}</dd></div>
+        {project.roles.length > 0 && <div><dt>{isZh ? '职责' : 'Role'}</dt><dd>{project.roles.join(' · ')}</dd></div>}
         {project.teamSize > 0 && <div><dt>{isZh ? '团队' : 'Team'}</dt><dd>{project.teamContext}</dd></div>}
       </dl>
       {project.links.length > 0 && <div class="project-links">

@@ -44,3 +44,14 @@ test('Psychotherapy shows confirmed copy and both real project screenshots', asy
   );
   await expect(page.getByText('概念视觉')).toHaveCount(0);
 });
+
+test('Fishing on a Flat Earth shows the spherical-ocean concept without a role field', async ({ page }) => {
+  await page.goto('/portfolio-content/zh/projects/fishing-on-a-flat-earth/');
+  await expect(page.getByText(/平面海域通过渲染呈现为球体/).first()).toBeVisible();
+  await expect(page.locator('.real-media--contain img')).toHaveAttribute(
+    'src',
+    '/portfolio-content/generated/projects/fishing-on-a-flat-earth.webp',
+  );
+  await expect(page.locator('.project-meta dt').filter({ hasText: '职责' })).toHaveCount(0);
+  await expect(page.getByText('概念视觉')).toHaveCount(0);
+});

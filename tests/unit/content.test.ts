@@ -45,4 +45,18 @@ describe('portfolio content', () => {
       },
     });
   });
+
+  it('presents Fishing on a Flat Earth without personal-role copy and with its real screenshot', () => {
+    const portfolio = localizePortfolio(loadPortfolio(), 'en');
+    const project = portfolio.projects.find(({ id }) => id === 'fishing-on-a-flat-earth');
+
+    expect(project?.summary).toContain('planar ocean');
+    expect(project?.summary).toContain('sphere');
+    expect(project?.roles).toEqual([]);
+    expect(getProjectMedia('fishing-on-a-flat-earth')).toMatchObject({
+      kind: 'image',
+      src: '/portfolio-content/generated/projects/fishing-on-a-flat-earth.webp',
+      fit: 'contain',
+    });
+  });
 });
